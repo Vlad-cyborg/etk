@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="settings" label="COMIEL_IMPORT_FIELDSET_SETTINGS_LABEL">
+        <field name="uniqueFieldName"
+               type="list"
+               class="span12"
+               label="COMIEL_IMPORT_UNIQUE_FIELD_NAME"
+               description="COMIEL_IMPORT_UNIQUE_FIELD_NAME_DESC"
+               default="ean">
+            <option value="id">COMIEL_IMPORT_UNIQUE_FIELD_NAME_ID</option>
+            <option value="ean">COMIEL_IMPORT_UNIQUE_FIELD_NAME_EAN</option>
+            <option value="manufacturer_code">COMIEL_IMPORT_UNIQUE_FIELD_NAME_CODE</option>
+            <option value="name">COMIEL_IMPORT_UNIQUE_FIELD_NAME_NAME</option>
+        </field>
+        <field name="categoryDelimiter"
+               type="list"
+               class="span12"
+               label="COMIEL_CATEGORY_DELIMITER"
+               description="COMIEL_CATEGORY_DELIMITER_DESC"
+               default="/">
+            <option value="/">COMIEL_CATEGORY_DELIMITER_1</option>
+            <option value="\">COMIEL_CATEGORY_DELIMITER_2</option>
+        </field>
+        <field name="insert"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_INSERT_ENTITY"
+               description="COMIEL_IMPORT_INSERT_ENTITY_DESC"
+               default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="update"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_UPDATE_ENTITY"
+               description="COMIEL_IMPORT_UPDATE_ENTITY_DESC"
+               default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="updateModified"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_UPDATE_MODIFIED_ENTITY"
+               description="COMIEL_IMPORT_UPDATE_MODIFIED_ENTITY_DESC"
+               default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="generateAlias"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_GENERATE_ALIAS"
+               description="COMIEL_IMPORT_GENERATE_ALIAS_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="unPublish"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_UN_PUBLISH"
+               description="COMIEL_IMPORT_UN_PUBLISH_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="unPublishCategories"
+               type="categories"
+               showon="unPublish:1"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_IMPORT_UN_PUBLISH_CATEGORIES"
+               description="COMIEL_IMPORT_UN_PUBLISH_CATEGORIES_DESC"
+               default="">
+            <option value="">JALL</option>
+        </field>
+        <field name="unPublishLogicCondition"
+               type="list"
+               showon="unPublish:1"
+               class="span12"
+               label="COMIEL_IMPORT_UN_PUBLISH_LOGIC_CONDITION"
+               description="COMIEL_IMPORT_UN_PUBLISH_LOGIC_CONDITION_DESC"
+               default="AND">
+            <option value="AND">COMIEL_EXPORT_LOGIC_CONDITION_AND</option>
+            <option value="OR">COMIEL_EXPORT_LOGIC_CONDITION_OR</option>
+        </field>
+        <field name="unPublishManufacturers"
+               type="manufacturers"
+               showon="unPublish:1"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_IMPORT_UN_PUBLISH_MANUFACTURERS"
+               description="COMIEL_IMPORT_UN_PUBLISH_MANUFACTURERS_DESC"
+               default="">
+            <option value="">JALL</option>
+            <option value="0">COMIEL_EXPORT_MANUFACTURERS_EMPTY</option>
+        </field>
+        <field name="unCount"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_UN_COUNT"
+               description="COMIEL_IMPORT_UN_COUNT_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="unCountCategories"
+               type="categories"
+               showon="unCount:1"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_IMPORT_UN_COUNT_CATEGORIES"
+               description="COMIEL_IMPORT_UN_COUNT_CATEGORIES_DESC"
+               default="">
+            <option value="">JALL</option>
+        </field>
+        <field name="unCountLogicCondition"
+               type="list"
+               showon="unCount:1"
+               class="span12"
+               label="COMIEL_IMPORT_UN_COUNT_LOGIC_CONDITION"
+               description="COMIEL_IMPORT_UN_COUNT_LOGIC_CONDITION_DESC"
+               default="AND">
+            <option value="AND">COMIEL_EXPORT_LOGIC_CONDITION_AND</option>
+            <option value="OR">COMIEL_EXPORT_LOGIC_CONDITION_OR</option>
+        </field>
+        <field name="unCountManufacturers"
+               type="manufacturers"
+               showon="unCount:1"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_IMPORT_UN_COUNT_MANUFACTURERS"
+               description="COMIEL_IMPORT_UN_COUNT_MANUFACTURERS_DESC"
+               default="">
+            <option value="">JALL</option>
+            <option value="0">COMIEL_EXPORT_MANUFACTURERS_EMPTY</option>
+        </field>
+        <field name="relatedFieldName"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_RELATED_FIELD_NAME"
+               description="COMIEL_IMPORT_RELATED_FIELD_NAME_DESC"
+               default="id">
+            <option value="ean">COMIEL_PRODUCT_EAN</option>
+            <option value="id">COMIEL_PRODUCT_ID</option>
+        </field>
+        <field name="executeBackupMySQL"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_CREATE_BACKUP_MYSQL"
+               description="COMIEL_IMPORT_CREATE_BACKUP_MYSQL_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="executeResize"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_IMPORT_RESIZE_IMAGES"
+               description="COMIEL_IMPORT_RESIZE_IMAGES_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="debug"
+               disabled="true"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_MODE_DEBUG"
+               description="COMIEL_MODE_DEBUG_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="maxExecutionTime"
+               type="numeric"
+               class="span12"
+               min="0"
+               label="COMIEL_MAX_EXECUTION_TIME"
+               description="COMIEL_MAX_EXECUTION_TIME_DESC"
+               default=""/>
+        <field name="maxLimitRead"
+               type="numeric"
+               class="span12"
+               min="0"
+               label="COMIEL_MAX_LIMIT_READ"
+               description="COMIEL_MAX_LIMIT_READ_DESC"
+               default=""/>
+        <field name="csvEncode"
+               type="list"
+               class="span12"
+               label="COMIEL_CSV_ENCODE"
+               description="COMIEL_CSV_ENCODE_DESC"
+               default="utf-8">
+            <option value="utf-8">COMIEL_CSV_ENCODE_UTF_8</option>
+        </field>
+        <field name="csvDelimiter"
+               type="list"
+               class="span12"
+               label="COMIEL_CSV_DELIMITER"
+               description="COMIEL_IMPORT_CSV_DELIMITER_DESC"
+               default=";">
+            <option value=";">COMIEL_CSV_DELIMITER_1</option>
+            <option value=",">COMIEL_CSV_DELIMITER_2</option>
+        </field>
+        <field name="csvEnclosure"
+               type="list"
+               class="span12"
+               label="COMIEL_CSV_ENCLOSURE"
+               description="COMIEL_IMPORT_CSV_ENCLOSURE_DESC"
+               default="&quot;">
+            <option value="&quot;">COMIEL_CSV_ENCLOSURE_1</option>
+            <option value="&apos;">COMIEL_CSV_ENCLOSURE_2</option>
+        </field>
+    </fieldset>
+</form>         	    	  		        	          	

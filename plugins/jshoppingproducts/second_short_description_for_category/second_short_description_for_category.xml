@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0.0" method="upgrade" group="jshoppingproducts">
+    <name>JoomShopping addon - Second Short Description for a Category</name>
+    <creationDate>07.12.2015</creationDate>
+    <author>MAXXmarketing GmbH</author>
+    <authorEmail>marketing@maxx-marketing.net</authorEmail>
+    <authorUrl>http://www.webdesigner-profi.de</authorUrl>
+    <copyright></copyright>
+    <license>Open Source License, GNU/GPL</license>
+    <version>1.0.0</version>	
+    <description>second_short_description_for_category</description> 
+    <files>
+        <filename plugin="second_short_description_for_category">second_short_description_for_category.php</filename>
+    </files>
+</extension>

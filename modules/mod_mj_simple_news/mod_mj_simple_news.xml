@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+	<name>MJ Simple News</name>
+	<creationDate>November 2013</creationDate>
+	<author>MicroJoom</author>
+	<copyright>Copyright (c) 2013 MicroJoom</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@microjoom.com</authorEmail>
+	<authorUrl>http://www.microjoom.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MJ_DESCRIPTION</description>
+	<files>
+		<filename module="mod_mj_simple_news">mod_mj_simple_news.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_mj_simple_news/helpers/fields">
+			<fieldset name="basic" >
+				<field name="link_target" type="list" default="_self" label="Open Link"
+					description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup window</option>
+				</field>
+				<field  type="mjheading" 
+					default="Large devices screen width from 1200px to greater."
+				/>
+				<field name="col_lg" type="list" default="3"  label="LG Column" description="Large devices screen width from 1200px to greater.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field type="mjheading" 
+					default="Medium  devices  screen width from 992px up to 1199px."
+				/>
+				<field name="col_md" type="list" default="3" label="MD Column" description="Medium  devices  screen width from 992px up to 1199px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field  type="mjheading" 
+					default="Small devices  screen width from 768px up to 991px."
+				/>
+				<field name="col_sm" type="list" default="2" label="SM Column" description="Small devices  screen width from 768px up to 991px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field  type="mjheading" 
+					default="Extra small devices screen width less than  or equal 767px."
+				/>
+				<field name="col_xs" type="list" default="1" label="XS Column" description="Extra small devices screen width less than  or equal 767px.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+			</fieldset>
+			<fieldset name="filter_options" label="Filter Options">	
+				<field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="Select Category" description="Select category" />
+				<field name="show_child_category_articles" type="radio" class="btn-group" default="0" label="Child Category Articles" description="Include or Exclude Articles from Child Categories.">
+                    <option value="1">Include</option>
+                    <option value="0">Exclude
+                    </option>
+                </field>  
+                <field name="levels" type="text" default="1" label="Category Depth" description="The number of child category levels to return." />                              
+                <field name="show_front" type="radio" default="show" class="btn-group" label="Featured Articles" description="Select to Show, Hide, or Only display Featured Articles.">
+                    <option value="show">Show</option>
+                    <option value="hide">Hide</option>
+                    <option value="only">Onlly</option>
+                </field>
+                <field name="article_ordering" type="list" default="a.title" label="Article Field to Order By" description="Select which field you would like Articles to be ordered by. Featured Ordering should only be used when Filtering Option for Featured Articles is set to 'Only'.">
+                    <option value="a.ordering">Article Manager Order</option>
+                    <option value="fp.ordering">Featured Articles Order</option>
+                    <option value="a.hits">Hits</option>
+                    <option value="a.title">Title</option>
+                    <option value="a.id">ID</option>
+                    <option value="a.alias">Alias</option>
+                    <option value="a.created">Created Date</option>
+                    <option value="modified">Modified Date</option>
+                    <option value="publish_up">Start Publishing Date</option>
+                    <option value="a.publish_down">Finish Publishing Date</option>
+                </field>
+                <field name="article_ordering_direction" type="list" default="ASC" label="Ordering Direction" description="Select the direction you would like Articles to be ordered by.">
+                    <option value="DESC">Descending</option>
+                    <option value="ASC">Ascending</option>
+                </field>
+                <field name="count" type="text" default="12" label="Count" description="The number of articles to display. The default value of 0 will display all articles." />
+			</fieldset>
+			<fieldset name="display_options" label="Display Options">
+				<field name="title_display" type="radio" default="1" class="btn-group" label="Display Title" description="Display title of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_title_maxlength" type="text" default="25" label="Title Maxlength" description="Maxlength of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_desc_display" type="radio" default="1" class="btn-group" label="Description display" description="Display description of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_desc_maxlength" type="text" default="200" label="Description Maxlength" description="Maxlength of description by characters. Enter value 0 if you want to show entire introtext. Please enter integer number >= 0." />
+				<field name="item_hits_display" class="btn-group" type="radio" default="1" label="Display Hits" description="Allow show/hidden hits of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_created_display" class="btn-group" type="radio" default="1" label="Display Created" description="Allow show/hidden created of item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_tag_display" class="btn-group" type="radio" default="0" label="Display Tag" description="Allow show/hidden tag of item. Use for Joomla 3.x">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_display" class="btn-group" type="radio" default="1" label="Display Read More" description="Allow show/hide Read More Link">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="image_options" label="Image Options">
+				<field name="imgf_cfg" type="imagesrc"  default="" label="Image Source">
+					<option value="imgf_image_intro">Intro Image</option>
+					<option value="imgf_inline_introtext">Inline Introtext</option>
+					<option value="imgf_inline_fulltext">Inline Fulltext</option>	
+					<option value="imgf_external">External</option>
+				</field>
+				
+                <field name="imgf_external_url" type="text" default="images/{id}.jpg" label="External Expr" description="External Expr"/>
+                <field name="imgf_function" type="list" label="Resize Method" default="2" description="Resize Method">
+                     <option value="0">None</option>
+                     <option value="1">Scale Fill</option>
+                     <option value="2">Scale Inside</option>
+                     <option value="3">Scale Outside</option>
+                     <option value="4">Crop</option>
+					 <option value="5">Crop Resize</option>
+                </field>
+                <field name="imgf_width" type="text" default="500" label="Image Width" description="Image Width" />
+                <field name="imgf_height" type="text" default="400" label="Image Height" description="Image Height" />
+                <field name="imgf_placeholder" label="Placeholder" class="btn-group" description="The Default Image. Applied for article has no image" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+                <field name="imgf_placeholder_path" type="text" default="modules/mod_mj_simple_news/assets/img/nophoto.png" label="Placeholder Path (or Url)" description="The Path (or URL) of Default Image"/>                               
+            </fieldset> 
+			<fieldset name="advanced" label="advanced">
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="local_jquery" type="radio" default="0" class="btn-group"
+					label="Include jQuery" description="Do you want include jQuery Libary?" >
+					<option value="1">Yes</option>
+					<option value="0">No
+					</option>
+				</field>
+				<field name="jquery_lazyload" type="radio" default="1" class="btn-group"
+					label="Include jQuery Lazyload" description="Include jQuery Lazyload?" >
+					<option value="1">Yes</option>
+					<option value="0">No
+					</option>
+				</field>
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

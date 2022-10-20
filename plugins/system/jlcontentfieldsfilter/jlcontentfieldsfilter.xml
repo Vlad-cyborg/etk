@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system" method="upgrade">
+	<name>PLG_JLCONTENTFIELDSFILTER</name>
+	<author>Joomline</author>
+	<creationDate>20.10.2020</creationDate>
+	<copyright>(C) 2017-2019 Arkadiy Sedelnikov, Joomline. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>sales@joomline.ru</authorEmail>
+	<authorUrl>https://joomline.ru</authorUrl>
+	<version>1.9.0</version>
+	<description>PLG_JLCONTENTFIELDSFILTER_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>params</folder>
+        <filename>index.html</filename>
+		<filename plugin="jlcontentfieldsfilter">jlcontentfieldsfilter.php</filename>
+	</files>
+	
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_jlcontentfieldsfilter.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_jlcontentfieldsfilter.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_jlcontentfieldsfilter.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_jlcontentfieldsfilter.sys.ini</language>
+    </languages>
+
+	<scriptfile>script.php</scriptfile>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/minicck/elements">
+            <fieldset name="basic">
+
+            </fieldset>
+		</fields>
+	</config>
+</extension>

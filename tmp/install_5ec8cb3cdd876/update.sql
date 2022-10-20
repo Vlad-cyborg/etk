@@ -1,0 +1,1 @@
+alter table `#__jshopping_order_item` add column `category_id` int(11) NOT NULL;

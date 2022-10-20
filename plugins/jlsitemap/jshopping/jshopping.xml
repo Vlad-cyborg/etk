@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="jlsitemap" method="upgrade">
+	<name>JLSitemap - JoomShopping</name>
+	<author>Nevigen.com</author>
+	<creationDate>October, 2019</creationDate>
+	<copyright>Copyright © Nevigen.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@nevigen.com</authorEmail>
+	<authorUrl>https://nevigen.com/</authorUrl>
+    <version>1.4</version>
+	<description><![CDATA[Developed & Powered by <a href="https://nevigen.com/" target="_blank">Nevigen.com</a>]]></description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="jshopping">jshopping.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="access"
+					type="accesslevel"
+					label="PLG_JLSITEMAP_JSHOPPING_ACCESS_LABEL"
+				/>
+			</fieldset>
+			<fieldset name="products">
+				<field
+					name="products"
+					type="radio"
+					default="1"
+					label="PLG_JLSITEMAP_JSHOPPING_SHOW_LABEL"
+					description=""
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="hide_product_not_avaible_stock"
+					type="radio"
+					default="0"
+					label="PLG_JLSITEMAP_JSHOPPING_HIDE_PRODUCT_NOT_AVAIBLE_STOCK"
+					description=""
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="changefreq_products"
+					type="list"
+					default="weekly"
+					label="PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_LABEL"
+					showon="products:1"
+				>
+					<option value="always">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_ALWAYS</option>
+					<option value="hourly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_HOURLY</option>
+					<option value="daily">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_DAILY</option>
+					<option value="weekly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_WEEKLY</option>
+					<option value="monthly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_MONTHLY</option>
+					<option value="yearly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_YEARLY</option>
+					<option value="never">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_NEVER</option>
+				</field>
+				<field
+					name="priority_products"
+					type="list"
+					default="0.5"
+					label="PLG_JLSITEMAP_JSHOPPING_PRIORITY_LABEL"
+					showon="products:1"
+				>
+					<option value="0.0">0.0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="0.6">0.6</option>
+					<option value="0.7">0.7</option>
+					<option value="0.8">0.8</option>
+					<option value="0.9">0.9</option>
+					<option value="1">1</option>
+				</field>
+			</fieldset>
+			<fieldset name="categories">
+				<field
+					name="categories"
+					type="radio"
+					default="1"
+					label="PLG_JLSITEMAP_JSHOPPING_SHOW_LABEL"
+					description=""
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="changefreq_categories"
+					type="list"
+					default="weekly"
+					label="PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_LABEL"
+					showon="categories:1"
+				>
+					<option value="always">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_ALWAYS</option>
+					<option value="hourly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_HOURLY</option>
+					<option value="daily">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_DAILY</option>
+					<option value="weekly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_WEEKLY</option>
+					<option value="monthly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_MONTHLY</option>
+					<option value="yearly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_YEARLY</option>
+					<option value="never">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_NEVER</option>
+				</field>
+				<field
+					name="priority_categories"
+					type="list"
+					default="0.5"
+					label="PLG_JLSITEMAP_JSHOPPING_PRIORITY_LABEL"
+					showon="categories:1"
+				>
+					<option value="0.0">0.0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="0.6">0.6</option>
+					<option value="0.7">0.7</option>
+					<option value="0.8">0.8</option>
+					<option value="0.9">0.9</option>
+					<option value="1">1</option>
+				</field>
+			</fieldset>
+			<fieldset name="manufacturers">
+				<field
+					name="manufacturers"
+					type="radio"
+					default="1"
+					label="PLG_JLSITEMAP_JSHOPPING_SHOW_LABEL"
+					description=""
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="changefreq_manufacturers"
+					type="list"
+					default="weekly"
+					label="PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_LABEL"
+					showon="manufacturers:1"
+				>
+					<option value="always">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_ALWAYS</option>
+					<option value="hourly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_HOURLY</option>
+					<option value="daily">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_DAILY</option>
+					<option value="weekly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_WEEKLY</option>
+					<option value="monthly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_MONTHLY</option>
+					<option value="yearly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_YEARLY</option>
+					<option value="never">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_NEVER</option>
+				</field>
+				<field
+					name="priority_manufacturers"
+					type="list"
+					default="0.5"
+					label="PLG_JLSITEMAP_JSHOPPING_PRIORITY_LABEL"
+					showon="manufacturers:1"
+				>
+					<option value="0.0">0.0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="0.6">0.6</option>
+					<option value="0.7">0.7</option>
+					<option value="0.8">0.8</option>
+					<option value="0.9">0.9</option>
+					<option value="1">1</option>
+				</field>
+			</fieldset>
+			<fieldset name="vendors">
+				<field
+					name="vendors"
+					type="radio"
+					default="0"
+					label="PLG_JLSITEMAP_JSHOPPING_SHOW_LABEL"
+					description=""
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="changefreq_vendors"
+					type="list"
+					default="weekly"
+					label="PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_LABEL"
+					showon="vendors:1"
+				>
+					<option value="always">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_ALWAYS</option>
+					<option value="hourly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_HOURLY</option>
+					<option value="daily">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_DAILY</option>
+					<option value="weekly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_WEEKLY</option>
+					<option value="monthly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_MONTHLY</option>
+					<option value="yearly">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_YEARLY</option>
+					<option value="never">PLG_JLSITEMAP_JSHOPPING_CHANGEFREQ_NEVER</option>
+				</field>
+				<field
+					name="priority_vendors"
+					type="list"
+					default="0.5"
+					label="PLG_JLSITEMAP_JSHOPPING_PRIORITY_LABEL"
+					showon="vendors:1"
+				>
+					<option value="0.0">0.0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="0.6">0.6</option>
+					<option value="0.7">0.7</option>
+					<option value="0.8">0.8</option>
+					<option value="0.9">0.9</option>
+					<option value="1">1</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Nevigen - JLSitemap JoomShopping">https://nevigen.com/updateservers/jlsitemap_jshopping.xml</server>
+	</updateservers>
+</extension>

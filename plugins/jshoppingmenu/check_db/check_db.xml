@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.7" method="upgrade" group="jshoppingmenu">
+    <name>JoomShopping check db</name>
+    <creationDate>07.06.2013</creationDate>
+    <version>1.0.0</version>
+    <author>MAXXmarketing GmbH</author>
+    <authorEmail>marketing@maxx-marketing.net</authorEmail>
+    <authorUrl>http://www.webdesigner-profi.de</authorUrl>
+    <copyright></copyright>
+    <license>2013. MAXXmarketing GmbH. All rights reserved.</license>
+    <description></description> 
+    <files>
+        <filename plugin="check_db">check_db.php</filename>
+    </files>
+</extension>

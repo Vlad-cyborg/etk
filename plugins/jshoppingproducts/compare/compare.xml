@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="2.5" type="plugin" method="upgrade" group="jshoppingproducts">
+    <name>JoomShopping - Compare Ajax</name>
+    <creationDate>22/11/2016</creationDate>
+    <author>Brooksus</author>
+    <authorEmail>admin@brooksite.ru</authorEmail>
+    <authorUrl>http://brooksite.ru</authorUrl>
+    <copyright>Brooksite.ru. All rights reserved.</copyright>
+    <license>2016. Brooksite.ru (http://brooksite.ru/litsenzionnoe-soglashenie.html)</license>
+    <version>4.0.6</version>
+    <description>PLG_COMPARE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="compare">compare.php</filename>
+		<filename>index.html</filename>
+        <filename>license.txt</filename>
+		<filename>helper_compare_params.php</filename>
+		<filename>helper_compare.php</filename>
+		<filename>helper_list_compare.php</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="ident_link_list" type="text" default="_tmp_var_buttons" label="Идентификатор для списка" description="PLG_IDENT_LINK_LIST_DESC" required="true" filter="string" size="40" />
+
+
+                <field name="ident_link_prod_null" type="text" default="_tmp_product_html_after_buttons" label="Идентификатор для карточки (нулевое количество)" description="PLG_IDENT_LINK_PROD_NULL" required="true" filter="string" size="40" />
+
+                <field name="ident_link_prod" type="text" default="_tmp_product_html_buttons" label="Идентификатор для карточки" description="PLG_IDENT_LINK_PROD" required="true" filter="string" size="40" />
+
+                <field name="text_or_icons" type="radio" default="1" label="Использовать иконки вместо текста" description="PLG_TEXT_ICONS" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="text_link_add_to_compare" type="text" default="Добавить к сравнению" label="Текст (класс иконки Awesome) ссылки (кнопки) добавить к сравнению" description="PLG_TEXT_LINK_ADD" required="true" filter="string" size="40" />
+
+                <field name="text_link_go_to_compare" type="text" default="Перейти к сравнению" label="Текст (класс иконки Awesome) ссылки (кнопки) перейти к сравнению" description="PLG_TEXT_LINK_GO" required="true" filter="string" size="40" />
+
+                <field name="text_link_add_to_compare_title" type="text" default="Добавить к сравнению" label="Титл ссылки (кнопки) добавить к сравнению" description="PLG_TITLE_ADD" required="true" filter="string" size="40" />
+
+                <field name="text_link_go_to_compare_title" type="text" default="Перейти к сравнению" label="Титл ссылки (кнопки) перейти к сравнению" description="PLG_TITLE_GO" required="true" filter="string" size="40" />
+
+                <field name="compare_link_text" type="text" default="" label="Пункт меню" description="PLG_TEXT_LINK">
+                </field>
+
+                <field name="compare_code" type="radio" default="1" label="Показать код товара" description="Показать/скрыть код товара" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_manufacturer" type="radio" default="1" label="Показать производителя" description="Показать/скрыть производителя" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_show_description" type="radio" default="1" label="Показать краткое описание" description="Показать/скрыть краткое описание" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_rating" type="radio" default="1" label="Показать рейтинг товара" description="Показать/скрыть рейтинг товара" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_weight" type="radio" default="1" label="Показать вес товара" description="Показать/скрыть вес товара" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_attr" type="radio" default="2" label="Показать атрибуты товара" description="Показать/скрыть атрибуты товара" filter="">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+                <field name="compare_remove" type="radio" default="1" label="Кнопка удалить" description="Показать кнопку удалить в карточке и списке товароа">
+                    <option value="1">Да</option>
+                    <option value="0">Нет</option>
+                </field>
+
+                <field name="add_style" type="radio" default="1" label="Подключить стиль оформления" description="Подключить стиль оформления">
+                    <option value="1">Да</option>
+                    <option value="2">Нет</option>
+                </field>
+
+            </fieldset>
+        </fields>
+    </config>
+    <languages>
+        <language tag="ru-RU">ru-RU.plg_jshoppingproducts_compare.ini</language>
+        <language tag="en-GB">en-GB.plg_jshoppingproducts_compare.ini</language>
+        <language tag="uk-UA">uk-UA.plg_jshoppingproducts_compare.ini</language>
+    </languages>
+</extension>

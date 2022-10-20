@@ -1,0 +1,140 @@
+.ymlexport .nav-tabs {border-bottom-color: transparent;}
+.ymlexport .nav-tabs > li > a {border-bottom: 1px solid #c0c0c0;}
+.ymlexport .nav-tabs > .active > a {
+	background-color: #f0f0f0 !important;
+	border-bottom-color: transparent;
+	color: #000;
+}
+
+h2.ymlexport-title {
+	font-size: 1.6em;
+	color: white;
+	text-shadow: 0 1px 0 black;
+	border-radius: 6px;
+	padding: 5px 10px;
+	background-color: #08c;
+	text-decoration: none !important;
+}
+h3.ymlexport-title {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+ul.blank {list-style: none;}
+.ymlexport_sef {}
+.color1 { color: rgb(79, 134, 62); }
+.color2 { color: red; }
+.ymlexport_successmsg {font-size: 1.3em;}
+.ymlexport_successmsg a {
+	font-weight: bold;
+	text-decoration: underline !important;
+}
+.ymlexport_successmsg a:hover {text-decoration: none !important;}
+.ymlexport_errormsg {font-size: 1.3em; color:red;}
+a.ymlexport_ok_button:link, a.ymlexport_ok_button:visited {
+	font-size: 16px;
+	padding: 5px 5px 6px 4px;
+	color: white;
+	border-radius: 17px;
+	background-color: #08c;
+	text-decoration: none !important;
+}
+a.ymlexport_ok_button:hover {
+	background-color: #3E9FCF;
+}
+
+.ymlexport table.adminlist thead { 
+	border-bottom: 1px solid #D3D3D3;
+	border-top: 1px solid #f1f1f1;
+	text-shadow: 0 1px 0 #FFF;
+	background: #ededed;
+	background: -webkit-linear-gradient(top,#fafafa 0%,#ededed 100%);
+	background: -moz-linear-gradient(top,#fafafa 0%,#ededed 100%);
+	background: -o-linear-gradient(top,#fafafa 0%,#ededed 100%);
+	background: -ms-linear-gradient(top,#fafafa 0%,#ededed 100%);
+	background: linear-gradient(top,#fafafa 0%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ededed',GradientType=0);
+}
+.ymlexport table.adminlist th { padding: 5px; text-align: center;}
+.ymlexport table.adminlist td { border-bottom: 1px dashed #ccc; }
+table.ymlexport_list { margin: 10px auto;}
+table.ymlexport_list thead { background: lightblue;}
+table.ymlexport_list thead td { 
+	padding: 3px 10px;
+	border-bottom: 1px solid lightslategrey;
+	border-right: 1px solid lightslategray; 
+}
+table.ymlexport_list tbody td { 
+	padding-left: 9px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+table.ymlexport_list tfoot {
+	background: #ddd;
+	font-size: 1.2em;
+}
+table.ymlexport_list tfoot td { padding: 8px; }
+.ymlexport ul {
+	margin: 0;
+	padding: 5px 5px 0 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ymlexport ul:nth-of-type(2) {
+	border-left: 1px dashed #aaa;
+	border-right: 1px dashed #aaa;
+}
+.ymlexport li { display: block; margin-bottom: 10px; }
+.ymlexport li:last-of-type { margin-bottom: 0; }
+.ymlexport li input { max-width: 50%; }
+.ymlexport li label {
+	width: 40%;
+	text-align: right;
+	margin-right: 2%;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: top;
+	cursor: default;
+}
+
+.ymlexport li label,
+.ymlexport li label *,
+.ymlexport li input,
+.ymlexport li select,
+.ymlexport li textarea {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+.ymlexport li input, .ymlexport li textarea, .ymlexport li select {
+	float: none !important;
+	margin: 0;
+	padding: 3px;
+	max-width: 50%;
+	vertical-align: baseline;
+}
+.ymlexport li input[type="number"],
+.ymlexport li input[type="text"],
+.ymlexport li textarea,
+.ymlexport li select {
+	width: 220px;
+}
+.ymlexport li input[type="checkbox"] {
+	margin-left: 20%;
+	width: 1.5em;
+	height: 1.5em;
+}
+.ymlexport li input[type="checkbox"]:checked {transform: scale(1.2);}
+.ymlexport li.checkbox label {
+	width: auto;
+	margin-left: 10px;
+}
+.ymlexport li label code {font-size: .8em; display: inline-block;}
+.ymlexport li label code+span {display: block;}
+select#param_description {
+	width: 54%;
+	max-width: 225px;
+}
+.hasTip {cursor: pointer !important; transition: color .2s;}
+.hasTip:hover {color: #f44336;}
+.ymlexport .row-remove .icon {color: red; cursor: pointer; transition: all .1s;}
+.ymlexport .row-remove .icon:hover {transform: scale(1.4) rotate(90deg);}

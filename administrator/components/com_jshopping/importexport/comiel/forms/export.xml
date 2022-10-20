@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="settings" label="COMIEL_EXPORT_FIELDSET_SETTINGS_LABEL">
+        <field name="modelName" type="hidden" default="product"/>
+        <field name="method"
+               type="list"
+               class="span12"
+               label="COMIEL_EXPORT_METHOD"
+               description="COMIEL_EXPORT_METHOD_DESC"
+               default="maximum">
+            <option value="minimum">COMIEL_EXPORT_METHOD_MINIMUM</option>
+            <option value="medium">COMIEL_EXPORT_METHOD_MEDIUM</option>
+            <option value="maximum">COMIEL_EXPORT_METHOD_MAXIMUM</option>
+        </field>
+        <field name="extension"
+               type="list"
+               class="span12"
+               label="COMIEL_EXPORT_EXTENSION"
+               description="COMIEL_EXPORT_EXTENSION_DESC"
+               default="xlsx">
+            <option value="xlsx">COMIEL_EXPORT_EXTENSION_XLSX</option>
+            <option value="xls">COMIEL_EXPORT_EXTENSION_XLS</option>
+            <option value="csv">COMIEL_EXPORT_EXTENSION_CSV</option>
+        </field>
+        <field name="csvDelimiter"
+               type="list"
+               showon="extension:csv"
+               class="span12"
+               label="COMIEL_CSV_DELIMITER"
+               description="COMIEL_EXPORT_CSV_DELIMITER_DESC"
+               default="">
+            <option value=";">COMIEL_CSV_DELIMITER_1</option>
+            <option value=",">COMIEL_CSV_DELIMITER_2</option>
+        </field>
+        <field name="csvEnclosure"
+               type="list"
+               showon="extension:csv"
+               class="span12"
+               label="COMIEL_CSV_ENCLOSURE"
+               description="COMIEL_EXPORT_CSV_ENCLOSURE_DESC"
+               default="">
+            <option value="&quot;">COMIEL_CSV_ENCLOSURE_1</option>
+            <option value="&apos;">COMIEL_CSV_ENCLOSURE_2</option>
+        </field>
+        <field name="categoryDelimiter"
+               type="list"
+               class="span12"
+               label="COMIEL_CATEGORY_DELIMITER"
+               description="COMIEL_CATEGORY_DELIMITER_DESC"
+               default="">
+            <option value="/">COMIEL_CATEGORY_DELIMITER_1</option>
+            <option value="\">COMIEL_CATEGORY_DELIMITER_2</option>
+        </field>
+        <field name="language"
+               type="language"
+               class="span12"
+               label="COMIEL_EXPORT_LANGUAGE"
+               description="COMIEL_EXPORT_LANGUAGE_DESC"/>
+        <field name="languages"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_EXPORT_LANGUAGES"
+               description="COMIEL_EXPORT_LANGUAGES_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="published"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_EXPORT_PUBLISHED"
+               description="COMIEL_EXPORT_PUBLISHED_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="available"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_EXPORT_AVAILABLE"
+               description="COMIEL_EXPORT_AVAILABLE_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="executeArchiveImages"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_EXPORT_BACKUP_IMAGES"
+               description="COMIEL_EXPORT_BACKUP_IMAGES_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="debug"
+               disabled="true"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COMIEL_MODE_DEBUG"
+               description="COMIEL_MODE_DEBUG_DESC"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="fields"
+               type="fields"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_EXPORT_FIELDS"
+               description="COMIEL_EXPORT_FIELDS_DESC"
+               default="">
+            <option value="">JALL</option>
+        </field>
+        <field name="fileName"
+               type="text"
+               class="span12"
+               label="COMIEL_EXPORT_FILE_NAME"
+               description="COMIEL_EXPORT_FILE_NAME_DESC"
+               default="">
+        </field>
+    </fieldset>
+    <fieldset name="filter" label="COMIEL_EXPORT_FIELDSET_FILTER_LABEL">
+        <field name="categories"
+               type="categories"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_EXPORT_CATEGORIES"
+               description="COMIEL_EXPORT_CATEGORIES_DESC"
+               default="">
+            <option value="">JALL</option>
+        </field>
+        <field name="logicCondition"
+               type="list"
+               class="span12"
+               label="COMIEL_EXPORT_LOGIC_CONDITION"
+               description="COMIEL_EXPORT_LOGIC_CONDITION_DESC"
+               default="AND">
+            <option value="AND">COMIEL_EXPORT_LOGIC_CONDITION_AND</option>
+            <option value="OR">COMIEL_EXPORT_LOGIC_CONDITION_OR</option>
+        </field>
+        <field name="manufacturers"
+               type="manufacturers"
+               class="span12"
+               multiple="multiple"
+               label="COMIEL_EXPORT_MANUFACTURERS"
+               description="COMIEL_EXPORT_MANUFACTURERS_DESC"
+               default="">
+            <option value="">JALL</option>
+            <option value="0">COMIEL_EXPORT_MANUFACTURERS_EMPTY</option>
+        </field>
+    </fieldset>
+</form>         	    	  		        	          	

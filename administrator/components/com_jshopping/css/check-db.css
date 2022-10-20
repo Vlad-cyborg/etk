@@ -1,0 +1,15 @@
+
+
+.adminlist thead tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.adminlist thead th,
+.adminlist tbody td {
+	padding: 10px;
+	text-align: left;
+}
+
+.adminlist tbody > tr:nth-child(3n) {
+	background: #f6f6f6;
+}

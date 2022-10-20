@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.2" method="upgrade">
+    <name>comiel</name>
+	<author>Nevigen.com</author>
+	<creationDate>December, 2020</creationDate>
+	<copyright>Copyright © Nevigen.com. All rights reserved.</copyright>
+	<license>Proprietary. Copyrighted Commercial Software</license>
+	<authorEmail>support@nevigen.com</authorEmail>
+	<authorUrl>https://nevigen.com/</authorUrl>
+    <version>4.9</version>
+	<description><![CDATA[Developed & Powered by <a href="https://nevigen.com/" target="_blank">Nevigen.com</a>]]></description>
+    <scriptfile>comiel.php</scriptfile>
+    <fileset>
+        <files>
+            <folder>administrator</folder>
+            <folder>components</folder>
+        </files>
+    </fileset>
+	<updateservers>
+		<server type="extension" priority="1" name="Nevigen - Comiel">https://nevigen.com/updateservers/xlsimport.xml</server>
+	</updateservers>
+</extension>         	    	  		        	          	

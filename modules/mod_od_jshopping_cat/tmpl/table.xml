@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="file" version="1.0" method="upgrade">
+	<name>Od jshopping categories - Default template</name>
+	<creationDate>02.03.2015</creationDate>
+	<author>Odlord</author>
+	<authorEmail>odlord@mail.ru</authorEmail>
+	<authorUrl>www.odlord.ru</authorUrl>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>Default template for module Od jshopping categories</description>
+	<fileset>
+		<files target="modules/mod_od_jshopping_cat/tmpl">
+			<folder>table</folder>
+			<file writable="yes">table.php</file>
+			<file>table.xml</file>
+		</files>
+	</fileset>
+</extension>

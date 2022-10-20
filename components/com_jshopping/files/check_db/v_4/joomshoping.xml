@@ -1,0 +1,2079 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com_jshopping version='4.10.2'>
+	<addons>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<alias type='varchar'>
+			varchar(255) NOT NULL
+		</alias>
+		<name type='varchar'>
+			varchar(255) NOT NULL
+		</name>
+		<key type='text'>
+			text NOT NULL
+		</key>
+		<usekey type='tinyint'>
+			tinyint(1) NOT NULL
+		</usekey>
+		<version type='varchar'>
+			varchar(255) NOT NULL
+		</version>
+		<uninstall type='varchar'>
+			varchar(255) NOT NULL
+		</uninstall>
+		<params  type='longtext'>
+			longtext NOT NULL
+		</params>
+	</addons>
+	<attr>
+		<attr_id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</attr_id>
+		<attr_ordering type='int'>
+			int(11) NOT NULL DEFAULT '0'
+		</attr_ordering>
+		<attr_type type='tinyint'>
+			tinyint(1) NOT NULL
+		</attr_type>
+		<independent type='tinyint'>
+			tinyint(1) NOT NULL
+		</independent>
+		<allcats type='tinyint'>
+			tinyint(1) NOT NULL DEFAULT '1'
+		</allcats>
+		<cats type='text'>
+			text NOT NULL
+		</cats>
+		<name multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</name>
+		<description multilang='1' type='text'>
+			text NOT NULL
+		</description>
+		<group type='tinyint'>
+			tinyint(4) NOT NULL
+		</group>                 
+	</attr>
+	<attr_groups>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<ordering type='int'>
+			int(6) NOT NULL
+		</ordering>
+	</attr_groups>          
+	<attr_values>
+		<value_id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</value_id>
+		<attr_id type='int'>
+			int(11) NOT NULL
+		</attr_id>
+		<value_ordering type='int'>
+			int(11) NOT NULL DEFAULT '0'
+		</value_ordering>
+		<image type='varchar'>
+			varchar(255) NOT NULL
+		</image>
+		<name multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</name>
+	</attr_values>
+	<cart_temp>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<id_cookie type='varchar'>
+			varchar(255) NOT NULL
+		</id_cookie>
+		<cart type='text'>
+			text NOT NULL
+		</cart>
+		<type_cart type='varchar'>
+			varchar(32) NOT NULL
+		</type_cart>
+	</cart_temp>
+	<categories key = '`sort_add_date` (`category_add_date`)'>
+		<category_id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</category_id>
+		<category_image type='varchar'>
+			varchar(255) DEFAULT NULL
+		</category_image>
+		<category_parent_id type='int'>
+			int(11) NOT NULL DEFAULT '0'
+		</category_parent_id>
+		<category_publish type='tinyint unsigned'>
+			tinyint(1) unsigned NOT NULL DEFAULT '1'
+		</category_publish>
+		<category_template type='varchar'>
+			varchar(64) DEFAULT NULL
+		</category_template>
+		<ordering type='int'>
+			int(3) NOT NULL
+		</ordering>
+		<category_add_date type='datetime'>
+			datetime DEFAULT '0000-00-00 00:00:00'
+		</category_add_date>
+		<products_page type='int'>
+			int(8) NOT NULL DEFAULT '12'
+		</products_page>
+		<products_row type='int'>
+			int(3) NOT NULL DEFAULT '3'
+		</products_row>
+		<access type='int'>
+			int(3) NOT NULL DEFAULT '1'
+		</access>
+		<name multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</name>
+		<alias multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</alias>
+		<short_description multilang='1' type='text'>
+			text NOT NULL
+		</short_description>
+		<description multilang='1' type='text'>
+			text NOT NULL
+		</description>
+		<meta_title multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</meta_title>
+		<meta_description multilang='1' type='text'>
+			text NOT NULL
+		</meta_description>
+		<meta_keyword multilang='1' type='text'>
+			text NOT NULL
+		</meta_keyword>
+	</categories>
+	<config>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<count_products_to_page type='int'>
+			int(4) NOT NULL
+		</count_products_to_page>
+		<count_products_to_row type='int'>
+			int(2) NOT NULL
+		</count_products_to_row>
+		<count_category_to_row type='int'>
+			int(2) NOT NULL
+		</count_category_to_row>
+		<image_category_width type='int'>
+			int(4) NOT NULL
+		</image_category_width>
+		<image_category_height type='int'>
+			int(4) NOT NULL
+		</image_category_height>
+		<image_product_width type='int'>
+			int(4) NOT NULL
+		</image_product_width>
+		<image_product_height type='int'>
+			int(4) NOT NULL
+		</image_product_height>
+		<image_product_full_width type='int'>
+			int(4) NOT NULL
+		</image_product_full_width>
+		<image_product_full_height type='int'>
+			int(4) NOT NULL
+		</image_product_full_height>
+		<image_product_original_width type='int'>
+			int(4) NOT NULL
+		</image_product_original_width>
+		<image_product_original_height type='int'>
+			int(4) NOT NULL
+		</image_product_original_height>
+		<video_product_width type='int'>
+			int(4) NOT NULL
+		</video_product_width>
+		<video_product_height type='int'>
+			int(4) NOT NULL
+		</video_product_height>
+		<adminLanguage type='varchar'>
+			varchar(8) NOT NULL
+		</adminLanguage>
+		<defaultLanguage type='varchar'>
+			varchar(8) NOT NULL
+		</defaultLanguage>
+		<mainCurrency type='int'>
+			int(4) NOT NULL
+		</mainCurrency>
+		<decimal_count type='tinyint'>
+			tinyint(1) NOT NULL
+		</decimal_count>
+		<decimal_symbol type='varchar'>
+			varchar(5) NOT NULL
+		</decimal_symbol>
+		<thousand_separator type='varchar'>
+			varchar(5) NOT NULL
+		</thousand_separator>
+		<currency_format type='tinyint'>
+			tinyint(1) NOT NULL
+		</currency_format>
+		<use_rabatt_code type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_rabatt_code>
+		<enable_wishlist type='tinyint'>
+			tinyint(1) NOT NULL
+		</enable_wishlist>
+		<default_status_order type='tinyint'>
+			tinyint(1) NOT NULL
+		</default_status_order>
+		<store_address_format type='varchar'>
+			varchar(32) NOT NULL
+		</store_address_format>
+		<store_date_format type='varchar'>
+			varchar(32) NOT NULL
+		</store_date_format>
+		<contact_email type='varchar'>
+			varchar(128) NOT NULL
+		</contact_email>
+		<allow_reviews_prod type='tinyint'>
+			tinyint(1) NOT NULL
+		</allow_reviews_prod>
+		<allow_reviews_only_registered type='tinyint'>
+			tinyint(1) NOT NULL
+		</allow_reviews_only_registered>
+		<allow_reviews_manuf type='tinyint'>
+			tinyint(1) NOT NULL
+		</allow_reviews_manuf>
+		<max_mark type='int'>
+			int(11) NOT NULL
+		</max_mark>
+		<summ_null_shipping type='decimal,'>
+			decimal(12,2) NOT NULL
+		</summ_null_shipping>
+		<without_shipping type='tinyint'>
+			tinyint(1) NOT NULL
+		</without_shipping>
+		<without_payment type='tinyint'>
+			tinyint(1) NOT NULL
+		</without_payment>
+		<pdf_parameters type='varchar'>
+			varchar(32) NOT NULL
+		</pdf_parameters>
+		<next_order_number type='int'>
+			int(11) NOT NULL DEFAULT '1'
+		</next_order_number>
+		<shop_user_guest type='tinyint'>
+			tinyint(1) NOT NULL
+		</shop_user_guest>
+		<hide_product_not_avaible_stock type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_product_not_avaible_stock>
+		<show_buy_in_category type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_buy_in_category>
+		<user_as_catalog type='tinyint'>
+			tinyint(1) NOT NULL
+		</user_as_catalog>
+		<show_tax_in_product type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_tax_in_product>
+		<show_tax_product_in_cart type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_tax_product_in_cart>
+		<show_plus_shipping_in_product type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_plus_shipping_in_product>
+		<hide_buy_not_avaible_stock type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_buy_not_avaible_stock>
+		<show_sort_product type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_sort_product>
+		<show_count_select_products type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_count_select_products>
+		<order_send_pdf_client type='tinyint'>
+			tinyint(1) NOT NULL
+		</order_send_pdf_client>
+		<order_send_pdf_admin type='tinyint'>
+			tinyint(1) NOT NULL
+		</order_send_pdf_admin>
+		<show_delivery_time type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_delivery_time>
+		<securitykey type='varchar'>
+			varchar(128) NOT NULL
+		</securitykey>
+		<demo_type type='tinyint'>
+			tinyint(1) NOT NULL
+		</demo_type>
+		<product_show_manufacturer_logo type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_manufacturer_logo>
+		<product_show_manufacturer type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_manufacturer>
+		<product_show_weight type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_weight>
+		<max_count_order_one_product type='int'>
+			int(11) NOT NULL
+		</max_count_order_one_product>
+		<min_count_order_one_product type='int'>
+			int(11) NOT NULL
+		</min_count_order_one_product>
+		<min_price_order type='int'>
+			int(11) NOT NULL
+		</min_price_order>
+		<max_price_order type='int'>
+			int(11) NOT NULL
+		</max_price_order>
+		<hide_tax type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_tax>
+		<licensekod type='text'>
+			text NOT NULL
+		</licensekod>
+		<product_attribut_first_value_empty type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_attribut_first_value_empty>
+		<show_hits type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_hits>
+		<show_registerform_in_logintemplate type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_registerform_in_logintemplate>
+		<admin_show_product_basic_price type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_basic_price>
+		<admin_show_attributes type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_attributes>
+		<admin_show_delivery_time type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_delivery_time>
+		<admin_show_languages type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_languages>
+		<use_different_templates_cat_prod type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_different_templates_cat_prod>
+		<admin_show_product_video type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_video>
+		<admin_show_product_related type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_related>
+		<admin_show_product_files type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_files>
+		<admin_show_product_bay_price type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_bay_price>
+		<admin_show_product_labels type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_labels>
+		<sorting_country_in_alphabet type='tinyint'>
+			tinyint(1) NOT NULL
+		</sorting_country_in_alphabet>
+		<hide_text_product_not_available type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_text_product_not_available>
+		<show_weight_order type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_weight_order>
+		<discount_use_full_sum type='tinyint'>
+			tinyint(1) NOT NULL
+		</discount_use_full_sum>
+		<show_cart_all_step_checkout type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_cart_all_step_checkout>
+		<use_plugin_content type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_plugin_content>
+		<display_price_admin type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_price_admin>
+		<display_price_front type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_price_front>
+		<product_list_show_weight type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_weight>
+		<product_list_show_manufacturer type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_manufacturer>
+		<use_extend_tax_rule type='tinyint'>
+			tinyint(4) NOT NULL
+		</use_extend_tax_rule>
+		<use_extend_display_price_rule type='tinyint'>
+			tinyint(4) NOT NULL
+		</use_extend_display_price_rule>
+		<fields_register type='text'>
+			text NOT NULL
+		</fields_register>
+		<template type='varchar'>
+			varchar(128) NOT NULL
+		</template>
+		<show_product_code type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_product_code>
+		<show_product_code_in_cart type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_product_code_in_cart>
+		<savelog type='tinyint'>
+			tinyint(1) NOT NULL
+		</savelog>
+		<savelogpaymentdata type='tinyint'>
+			tinyint(1) NOT NULL
+		</savelogpaymentdata>
+		<product_list_show_min_price type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_min_price>
+		<product_count_related_in_row type='tinyint'>
+			tinyint(4) NOT NULL
+		</product_count_related_in_row>
+		<category_sorting type='tinyint'>
+			tinyint(1) NOT NULL DEFAULT '1'
+		</category_sorting>
+		<product_sorting type='tinyint'>
+			tinyint(1) NOT NULL DEFAULT '1'
+		</product_sorting>
+		<product_sorting_direction type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_sorting_direction>
+		<show_product_list_filters type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_product_list_filters>
+		<admin_show_product_extra_field type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_product_extra_field>
+		<product_list_display_extra_fields type='text'>
+			text NOT NULL
+		</product_list_display_extra_fields>
+		<filter_display_extra_fields type='text'>
+			text NOT NULL
+		</filter_display_extra_fields>
+		<product_hide_extra_fields type='text'>
+			text NOT NULL
+		</product_hide_extra_fields>
+		<cart_display_extra_fields type='text'>
+			text NOT NULL
+		</cart_display_extra_fields>
+		<default_country type='int'>
+			int(11) NOT NULL
+		</default_country>
+		<show_return_policy_in_email_order type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_return_policy_in_email_order>
+		<client_allow_cancel_order type='tinyint'>
+			tinyint(1) NOT NULL
+		</client_allow_cancel_order>
+		<admin_show_vendors type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_vendors>
+		<vendor_order_message_type type='tinyint'>
+			tinyint(1) NOT NULL
+		</vendor_order_message_type>
+		<admin_not_send_email_order_vendor_order type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_not_send_email_order_vendor_order>
+		<not_redirect_in_cart_after_buy type='tinyint'>
+			tinyint(1) NOT NULL
+		</not_redirect_in_cart_after_buy>
+		<product_show_vendor type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_vendor>
+		<product_show_vendor_detail type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_vendor_detail>
+		<product_list_show_vendor type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_vendor>
+		<admin_show_freeattributes type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_freeattributes>
+		<product_show_button_back type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_button_back>
+		<calcule_tax_after_discount type='tinyint'>
+			tinyint(1) NOT NULL
+		</calcule_tax_after_discount>
+		<product_list_show_product_code type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_product_code>
+		<radio_attr_value_vertical type='tinyint'>
+			tinyint(1) NOT NULL
+		</radio_attr_value_vertical>
+		<attr_display_addprice type='tinyint'>
+			tinyint(1) NOT NULL
+		</attr_display_addprice>
+		<use_ssl type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_ssl>
+		<product_list_show_price_description type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_price_description>
+		<display_button_print type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_button_print>
+		<hide_shipping_step type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_shipping_step>
+		<hide_payment_step type='tinyint'>
+			tinyint(1) NOT NULL
+		</hide_payment_step>
+		<image_resize_type type='tinyint'>
+			tinyint(1) NOT NULL
+		</image_resize_type>
+		<use_extend_attribute_data type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_extend_attribute_data>
+		<product_list_show_price_default type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_price_default>
+		<product_list_show_qty_stock type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_list_show_qty_stock>
+		<product_show_qty_stock type='tinyint'>
+			tinyint(1) NOT NULL
+		</product_show_qty_stock>
+		<displayprice type='tinyint'>
+			tinyint(1) NOT NULL
+		</displayprice>
+		<use_decimal_qty type='tinyint'>
+			tinyint(1) NOT NULL
+		</use_decimal_qty>
+		<ext_tax_rule_for type='tinyint'>
+			tinyint(1) NOT NULL
+		</ext_tax_rule_for>
+		<display_reviews_without_confirm type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_reviews_without_confirm>
+		<manufacturer_sorting type='tinyint'>
+			tinyint(1) NOT NULL
+		</manufacturer_sorting>
+		<admin_show_units type='tinyint'>
+			tinyint(1) NOT NULL
+		</admin_show_units>
+		<main_unit_weight type='tinyint'>
+			tinyint(3) NOT NULL
+		</main_unit_weight>
+		<create_alias_product_category_auto type='tinyint'>
+			tinyint(1) NOT NULL
+		</create_alias_product_category_auto>
+		<delivery_order_depends_delivery_product type='tinyint'>
+			tinyint(1) NOT NULL
+		</delivery_order_depends_delivery_product>
+		<show_delivery_time_step5 type='tinyint'>
+			tinyint(1) NOT NULL
+		</show_delivery_time_step5>
+		<other_config type='text'>
+			text NOT NULL
+		</other_config>
+	</config>
+	<config_display_prices>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<zones type='text'>
+			text NOT NULL
+		</zones>
+		<display_price type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_price>
+		<display_price_firma type='tinyint'>
+			tinyint(1) NOT NULL
+		</display_price_firma>
+	</config_display_prices>
+	<config_seo>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<alias type='varchar'>
+			varchar(64) NOT NULL
+		</alias>
+		<ordering type='int'>
+			int(11) NOT NULL
+		</ordering>
+		<title multilang='1' type='varchar'>
+			varchar(255) NOT NULL
+		</title>
+		<keyword multilang='1' type='text'>
+			text NOT NULL
+		</keyword>
+		<description multilang='1' type='text'>
+			text NOT NULL
+		</description>
+	</config_seo>
+	<config_statictext>
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<alias type='varchar'> 
+			varchar(64) NOT NULL
+		</alias>
+		<text multilang='1' type='text'>
+			text NOT NULL
+		</text>
+		<use_for_return_policy type='int'> 
+			int(11) NOT NULL
+		</use_for_return_policy>
+	</config_statictext>
+	<products_option unique_key="`prodkey` (`product_id`,`key`)">
+		<id type='int'>
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<product_id type='int'>
+			int(11) NOT NULL
+		</product_id>
+		<key type='varchar'> 
+			varchar(64) NOT NULL
+		</key>
+		<value type='text'> 
+			text NOT NULL
+		</value>
+	</products_option>
+	<countries>
+		<country_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</country_id>
+		<country_publish type="tinyint">
+			tinyint(4) NOT NULL
+		</country_publish>
+		<ordering type="smallint">
+			smallint(6) NOT NULL
+		</ordering>
+		<country_code type="varchar">
+			varchar(5) NOT NULL
+		</country_code>
+		<country_code_2 type="varchar">
+			varchar(5) NOT NULL
+		</country_code_2>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+	</countries>
+	<coupons>
+		<coupon_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</coupon_id>
+		<coupon_type type="tinyint">
+			tinyint(4) NOT NULL DEFAULT '0' COMMENT 'value_or_percent'
+		</coupon_type>
+		<coupon_code type="varchar">
+			varchar(100) NOT NULL DEFAULT ''
+		</coupon_code>
+		<coupon_value type="decimal,">
+			decimal(12,2) NOT NULL DEFAULT '0.00'
+		</coupon_value>
+		<tax_id type="int">
+			int(11) NOT NULL
+		</tax_id>
+		<used type="int">
+			int(11) NOT NULL
+		</used>
+		<for_user_id type="int">
+			int(11) NOT NULL
+		</for_user_id>
+		<coupon_start_date type="date">
+			date NOT NULL DEFAULT '0000-00-00'
+		</coupon_start_date>
+		<coupon_expire_date type="date">
+			date NOT NULL DEFAULT '0000-00-00'
+		</coupon_expire_date>
+		<finished_after_used type="int">
+			int(11) NOT NULL
+		</finished_after_used>
+		<coupon_publish type="tinyint">
+			tinyint(4) NOT NULL DEFAULT '0'
+		</coupon_publish>
+	</coupons>
+	<currencies>
+		<currency_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</currency_id>
+		<currency_name type="varchar">
+			varchar(64) NOT NULL
+		</currency_name>
+		<currency_code type="varchar">
+			varchar(20) NOT NULL
+		</currency_code>
+		<currency_code_iso type="varchar">
+			varchar(3) NOT NULL
+		</currency_code_iso>
+		<currency_code_num type="varchar">
+			varchar(3) NOT NULL
+		</currency_code_num>
+		<currency_ordering type="int">
+			int(11) NOT NULL
+		</currency_ordering>
+		<currency_value type="decimal,">
+			decimal(14,6) NOT NULL
+		</currency_value>
+		<currency_publish type="tinyint">
+			tinyint(1) NOT NULL
+		</currency_publish>
+	</currencies>
+	<delivery_times>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<days type="decimal,">
+			decimal(8,2) NOT NULL
+		</days>
+		<name multilang='1'  type="varchar">
+			varchar(255) NOT NULL
+		</name>
+	</delivery_times>
+	<free_attr>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<ordering type="int">
+			int(11) NOT NULL
+		</ordering>
+		<required type="tinyint">
+			tinyint(1) NOT NULL
+		</required>
+		<type type="tinyint">
+			tinyint(3) NOT NULL
+		</type>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+	</free_attr>
+	<import_export>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<name type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<alias type="varchar">
+			varchar(255) NOT NULL
+		</alias>
+		<description type="text">
+			text NOT NULL
+		</description>
+		<params type="text">
+			text NOT NULL
+		</params>
+		<endstart type="int">
+			int(11) NOT NULL
+		</endstart>
+		<steptime type="int">
+			int(11) NOT NULL
+		</steptime>
+	</import_export>
+	<languages>
+		<id  type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<language type="varchar">
+			varchar(32) DEFAULT NULL
+		</language>
+		<name type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<publish type="int">
+			int(11) NOT NULL
+		</publish>
+		<ordering type="int">
+			int(11) NOT NULL
+		</ordering>
+	</languages>
+	<manufacturers>
+		<manufacturer_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</manufacturer_id>
+		<manufacturer_url type="varchar">
+			varchar(255) NOT NULL
+		</manufacturer_url>
+		<manufacturer_logo type="varchar">
+			varchar(255) NOT NULL
+		</manufacturer_logo>
+		<manufacturer_publish type="tinyint">
+			tinyint(1) NOT NULL
+		</manufacturer_publish>
+		<products_page type="int">
+			int(11) NOT NULL
+		</products_page>
+		<products_row type="int">
+			int(11) NOT NULL
+		</products_row>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<alias multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</alias>
+		<short_description multilang='1' type="text">
+			text NOT NULL
+		</short_description>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+		<meta_title multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</meta_title>
+		<meta_description multilang='1' type="text">
+			text NOT NULL
+		</meta_description>
+		<meta_keyword multilang='1' type="text">
+			text NOT NULL
+		</meta_keyword>
+	</manufacturers>
+	<orders>
+		<order_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</order_id>
+		<order_number type="varchar">
+			varchar(50) NOT NULL
+		</order_number>
+		<user_id type="int">
+			int(11) NOT NULL
+		</user_id>
+		<order_total type="decimal,">	
+			decimal(14,4) NOT NULL
+		</order_total>
+		<order_subtotal type="decimal,">	
+			decimal(14,4) NOT NULL
+		</order_subtotal>
+		<order_tax type="decimal,">		
+			decimal(14,4) NOT NULL
+		</order_tax>
+		<order_tax_ext type="text">
+			text NOT NULL
+		</order_tax_ext>
+		<order_shipping type="decimal,">	
+			decimal(14,4) NOT NULL
+		</order_shipping>
+		<order_payment type="decimal,">		
+			decimal(14,4) NOT NULL
+		</order_payment>
+		<order_discount type="decimal,">	
+			decimal(14,4) NOT NULL
+		</order_discount>
+		<shipping_tax type="decimal,">	
+			decimal(12,4) NOT NULL
+		</shipping_tax>
+		<shipping_tax_ext type="text">
+			text NOT NULL
+		</shipping_tax_ext>
+		<payment_tax type="decimal,">	
+			decimal(12,4) NOT NULL
+		</payment_tax>
+		<payment_tax_ext type="text">
+			text NOT NULL
+		</payment_tax_ext>
+		<order_package type="decimal,">
+			decimal(12,2) NOT NULL
+		</order_package>
+		<package_tax_ext type="text">
+			text NOT NULL
+		</package_tax_ext>
+		<currency_code type="varchar">
+			varchar(20) NOT NULL
+		</currency_code>
+		<currency_code_iso type="varchar">
+			varchar(3) NOT NULL
+		</currency_code_iso>
+		<currency_exchange type="decimal,">
+			decimal(14,6) NOT NULL
+		</currency_exchange>
+		<order_status type="tinyint">
+			tinyint(4) NOT NULL
+		</order_status>
+		<order_created type="tinyint">
+			tinyint(1) NOT NULL
+		</order_created>
+		<order_date type="datetime">
+			datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+		</order_date>
+		<invoice_date type="datetime">
+			DATETIME NOT NULL
+		</invoice_date>
+		<order_m_date type="datetime">
+			datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+		</order_m_date>
+		<shipping_method_id type="int">
+			int(11) NOT NULL
+		</shipping_method_id>
+		<delivery_times_id type="int">
+			int(11) NOT NULL
+		</delivery_times_id>
+		<payment_method_id type="int">
+			int(11) NOT NULL
+		</payment_method_id>
+		<payment_params type="text">
+			text NOT NULL
+		</payment_params>
+		<payment_params_data type="text">
+			text NOT NULL
+		</payment_params_data>
+		<delivery_time type="varchar">
+			varchar(100) NOT NULL
+		</delivery_time>
+		<delivery_date type="datetime">
+			datetime NOT NULL
+		</delivery_date>
+		<coupon_id type="int">
+			int(11) NOT NULL
+		</coupon_id>
+		<ip_address type="varchar">
+			varchar(64) NOT NULL
+		</ip_address>
+		<order_add_info type="text">
+			text NOT NULL
+		</order_add_info>
+		<title type="tinyint">
+			tinyint(1) NOT NULL
+		</title>
+		<f_name type="varchar">
+			varchar(255) NOT NULL
+		</f_name>
+		<l_name type="varchar">
+			varchar(255) NOT NULL
+		</l_name>
+		<m_name type="varchar">
+			varchar(255) NOT NULL
+		</m_name>
+		<firma_name type="varchar">
+			varchar(255) NOT NULL
+		</firma_name>
+		<client_type type="tinyint">
+			tinyint(1) NOT NULL
+		</client_type>
+		<client_type_name type="varchar">
+			varchar(100) NOT NULL
+		</client_type_name>
+		<firma_code type="varchar">
+			varchar(100) NOT NULL
+		</firma_code>
+		<tax_number type="varchar">
+			varchar(100) NOT NULL
+		</tax_number>
+		<email type="varchar">
+			varchar(255) NOT NULL
+		</email>
+		<birthday type="date">
+			date NOT NULL
+		</birthday>
+		<street type="varchar">
+			varchar(100) NOT NULL
+		</street>
+		<street_nr type="varchar">
+			varchar(16) NOT NULL
+		</street_nr>
+		<home type="varchar">
+			varchar(20) NOT NULL
+		</home>
+		<apartment type="varchar">
+			varchar(20) NOT NULL
+		</apartment>
+		<zip type="varchar">
+			varchar(20) NOT NULL
+		</zip>
+		<city type="varchar">
+			varchar(100) NOT NULL
+		</city>
+		<state type="varchar">
+			varchar(100) NOT NULL
+		</state>
+		<country type="int">
+			int(11) NOT NULL
+		</country>
+		<phone type="varchar">
+			varchar(24) NOT NULL
+		</phone>
+		<mobil_phone type="varchar">
+			varchar(24) NOT NULL
+		</mobil_phone>
+		<fax type="varchar">
+			varchar(24) NOT NULL
+		</fax>
+		<ext_field_1 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_1>
+		<ext_field_2 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_2>
+		<ext_field_3 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_3>
+		<d_title type="tinyint">
+			tinyint(1) NOT NULL
+		</d_title>
+		<d_f_name type="varchar">
+			varchar(255) NOT NULL
+		</d_f_name>
+		<d_l_name type="varchar">
+			varchar(255) NOT NULL
+		</d_l_name>
+		<d_m_name type="varchar">
+			varchar(255) NOT NULL
+		</d_m_name>
+		<d_firma_name type="varchar">
+			varchar(255) NOT NULL
+		</d_firma_name>
+		<d_email type="varchar">
+			varchar(255) NOT NULL
+		</d_email>
+		<d_birthday type="date">
+			date NOT NULL
+		</d_birthday>
+		<d_street type="varchar">
+			varchar(100) NOT NULL
+		</d_street>
+		<d_street_nr type="varchar">
+			varchar(16) NOT NULL
+		</d_street_nr>
+		<d_home type="varchar">
+			varchar(20) NOT NULL
+		</d_home>
+		<d_apartment type="varchar">
+			varchar(20) NOT NULL
+		</d_apartment>
+		<d_zip type="varchar">
+			varchar(20) NOT NULL
+		</d_zip>
+		<d_city type="varchar">
+			varchar(100) NOT NULL
+		</d_city>
+		<d_state type="varchar">
+			varchar(100) NOT NULL
+		</d_state>
+		<d_country type="int">
+			int(11) NOT NULL
+		</d_country>
+		<d_phone type="varchar">
+			varchar(24) NOT NULL
+		</d_phone>
+		<d_mobil_phone type="varchar">
+			varchar(24) NOT NULL
+		</d_mobil_phone>
+		<d_fax type="varchar">
+			varchar(24) NOT NULL
+		</d_fax>
+		<d_ext_field_1 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_1>
+		<d_ext_field_2 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_2>
+		<d_ext_field_3 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_3>
+		<pdf_file type="varchar">
+			varchar(50) NOT NULL
+		</pdf_file>
+		<order_hash type="varchar">
+			varchar(32) NOT NULL
+		</order_hash>
+		<file_hash type="varchar">
+			varchar(64) NOT NULL
+		</file_hash>
+		<file_stat_downloads type="text">
+			text NOT NULL
+		</file_stat_downloads>
+		<order_custom_info type="text">
+			text NOT NULL
+		</order_custom_info>
+		<display_price type="tinyint">
+			tinyint(1) NOT NULL
+		</display_price>
+		<vendor_type type="tinyint">
+			tinyint(1) NOT NULL
+		</vendor_type>
+		<vendor_id type="int">
+			int(11) NOT NULL
+		</vendor_id>
+		<lang type="varchar">
+			varchar(16) NOT NULL
+		</lang>
+		<transaction type="text">
+			text NOT NULL
+		</transaction>
+		<shipping_params type="text">
+			text NOT NULL
+		</shipping_params>  
+		<shipping_params_data type="text">
+			text NOT NULL
+		</shipping_params_data> 
+		<product_stock_removed type="tinyint">
+			tinyint(1) NOT NULL
+		</product_stock_removed>                 
+	</orders>
+	<order_history>
+		<order_history_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</order_history_id>
+		<order_id type="int">
+			int(11) NOT NULL
+		</order_id>
+		<order_status_id type="tinyint">
+			tinyint(1) NOT NULL
+		</order_status_id>
+		<status_date_added type="datetime">
+			datetime NOT NULL
+		</status_date_added>
+		<customer_notify type="int">
+			int(1) DEFAULT NULL
+		</customer_notify>
+		<comments type="text">
+			text
+		</comments>
+	</order_history>
+	<order_item>
+		<order_item_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</order_item_id>
+		<order_id type="int">
+			int(11) NOT NULL
+		</order_id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<category_id type="int">
+			int(11) NOT NULL
+		</category_id>		
+		<product_ean type="varchar">
+			varchar(50) NOT NULL
+		</product_ean>
+		<product_name type="varchar">
+			varchar(100) NOT NULL
+		</product_name>		
+		<manufacturer_code type="varchar">
+			varchar(32) NOT NULL
+		</manufacturer_code>
+		<product_quantity type="decimal,">
+			decimal(12,2) NOT NULL
+		</product_quantity>
+		<product_item_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</product_item_price>
+		<product_tax type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</product_tax>
+		<product_attributes type="text">
+			text NOT NULL
+		</product_attributes>
+		<product_freeattributes type="text">
+			text NOT NULL
+		</product_freeattributes>
+		<attributes type="text">
+			text NOT NULL
+		</attributes>
+		<freeattributes type="text">
+			text NOT NULL
+		</freeattributes>
+		<extra_fields type="text">
+			text NOT NULL
+		</extra_fields>
+		<files type="text">
+			text NOT NULL
+		</files>
+		<weight type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</weight>
+		<thumb_image type="varchar">
+			varchar(255) NOT NULL
+		</thumb_image>
+		<manufacturer type="varchar">
+			varchar(255) NOT NULL
+		</manufacturer>
+		<delivery_times_id type="int">
+			int(4) NOT NULL
+		</delivery_times_id>
+		<vendor_id type="int">
+			int(11) NOT NULL
+		</vendor_id>
+		<basicprice type='decimal,'>
+			DECIMAL(12,2) NOT NULL
+		</basicprice>
+		<basicpriceunit type="varchar">
+			varchar(255) NOT NULL
+		</basicpriceunit>
+		<params type="text">
+			text NOT NULL
+		</params>
+	</order_item>
+	<order_status>
+		<status_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</status_id>
+		<status_code type="char">
+			char(1) NOT NULL
+		</status_code>
+		<name multilang='1' type="varchar">
+			varchar(100) NOT NULL
+		</name>
+	</order_status>
+	<payment_method>	
+		<payment_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</payment_id>
+		<payment_code type="varchar">
+			varchar(32) NOT NULL
+		</payment_code>
+		<payment_class type="varchar">
+			varchar(100) NOT NULL
+		</payment_class>
+		<payment_publish type="tinyint">
+			tinyint(1) NOT NULL
+		</payment_publish>
+		<payment_ordering type="int">
+			int(11) NOT NULL
+		</payment_ordering>
+		<payment_params type="text">
+			text NOT NULL
+		</payment_params>
+		<payment_type type="tinyint">
+			tinyint(4) NOT NULL
+		</payment_type>
+		<price type="decimal,">
+			decimal(12,2) NOT NULL
+		</price>
+		<price_type type="tinyint">
+			tinyint(1) NOT NULL
+		</price_type>
+		<tax_id type="int">
+			int(11) NOT NULL
+		</tax_id>
+		<image type="varchar">
+			varchar(255) NOT NULL
+		</image>
+		<show_descr_in_email type="tinyint">
+			tinyint(1) NOT NULL
+		</show_descr_in_email>
+		<show_bank_in_order type="tinyint">
+			tinyint(1) NOT NULL DEFAULT '1'
+		</show_bank_in_order>
+		<order_description type="text">
+			text NOT NULL
+		</order_description>
+		<name multilang='1' type="varchar">
+			varchar(100) NOT NULL
+		</name>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+	</payment_method>
+	<products_extra_fields>
+		<id type="int">
+			int(11) NOT NULL auto_increment PRIMARY KEY
+		</id>
+		<allcats type="tinyint">
+			tinyint(1) NOT NULL
+		</allcats>
+		<cats type="text">
+			text NOT NULL
+		</cats>
+		<type type="tinyint">
+			tinyint(1) NOT NULL
+		</type>
+		<multilist type="tinyint">
+			tinyint(1) NOT NULL
+		</multilist>
+		<group type="tinyint">
+			TINYINT(4) NOT NULL
+		</group>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+	</products_extra_fields>
+	<products key = '`product_manufacturer_id` (`product_manufacturer_id`)'>
+		<product_id type="int">
+			int(11) NOT NULL auto_increment PRIMARY KEY
+		</product_id>
+		<parent_id type="int">
+			int(11) NOT NULL
+		</parent_id>
+		<product_ean type="varchar">
+			varchar(32) NOT NULL
+		</product_ean>
+		<manufacturer_code type="varchar">
+			varchar(32) NOT NULL
+		</manufacturer_code>		
+		<product_quantity type="decimal,">	
+			DECIMAL(12,2) NOT NULL
+		</product_quantity>
+		<unlimited type="tinyint">
+			TINYINT(1) NOT NULL
+		</unlimited>
+		<product_availability type="varchar">
+			varchar(1) NOT NULL
+		</product_availability>
+		<product_date_added type="datetime">
+			datetime NOT NULL default '0000-00-00 00:00:00'
+		</product_date_added>
+		<date_modify type="datetime">
+			datetime NOT NULL default '0000-00-00 00:00:00'
+		</date_modify>
+		<product_publish type="tinyint">
+			tinyint(1) NOT NULL
+		</product_publish>
+		<product_tax_id type="tinyint">
+			tinyint(3) NOT NULL
+		</product_tax_id>
+		<currency_id type="int">
+			int(4) NOT NULL
+		</currency_id>
+		<product_template type="varchar">
+			varchar(64) NOT NULL default "default"
+		</product_template>
+		<product_url type="varchar">
+			varchar(128) NOT NULL
+		</product_url>
+		<product_old_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</product_old_price>
+		<product_buy_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</product_buy_price>
+		<product_price type="decimal,">
+			DECIMAL(18,6) NOT NULL
+		</product_price>
+		<min_price type="decimal,">
+			DECIMAL(12,2) NOT NULL
+		</min_price>
+		<different_prices type="tinyint">
+			TINYINT(1) NOT NULL
+		</different_prices>
+		<product_weight type="decimal,">
+			DECIMAL(14,4) NOT NULL
+		</product_weight>
+		<image type="varchar">
+			varchar(255) NOT NULL
+		</image>
+		<product_manufacturer_id type="int">
+			int(11) NOT NULL
+		</product_manufacturer_id>
+		<product_is_add_price type="tinyint">
+			TINYINT(1) NOT NULL
+		</product_is_add_price>
+		<add_price_unit_id type="int">
+			int(3) NOT NULL
+		</add_price_unit_id>
+		<average_rating type="float,">
+			float(4,2) NOT NULL
+		</average_rating>
+		<reviews_count type="int">
+			int(11) NOT NULL
+		</reviews_count>
+		<delivery_times_id type="int">
+			int(4) NOT NULL
+		</delivery_times_id>
+		<hits type="int">
+			int(11) NOT NULL
+		</hits>
+		<weight_volume_units type="decimal,">
+			DECIMAL(14,4) NOT NULL
+		</weight_volume_units>
+		<basic_price_unit_id type="int">
+			int(3) NOT NULL
+		</basic_price_unit_id>
+		<label_id type="int">
+			int(11) NOT NULL
+		</label_id>
+		<vendor_id type="int">
+			int(11) NOT NULL
+		</vendor_id>
+		<access type="int">
+			int(3) NOT NULL default '1'
+		</access>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<alias multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</alias>
+		<short_description multilang='1' type="text">
+			text NOT NULL
+		</short_description>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+		<meta_title multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</meta_title>
+		<meta_description multilang='1' type="text">
+			text NOT NULL
+		</meta_description>
+		<meta_keyword multilang='1' type="text">
+			text NOT NULL
+		</meta_keyword>
+	</products>
+	<products_attr>
+		<product_attr_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</product_attr_id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<buy_price type="decimal,">
+			decimal(12,2) NOT NULL
+		</buy_price>
+		<price type="decimal,">		
+			decimal(14,4) NOT NULL
+		</price>
+		<old_price type="decimal,">		
+			decimal(14,4) NOT NULL
+		</old_price>
+		<count type="decimal,">	
+			decimal(14,4) NOT NULL
+		</count>
+		<ean type="varchar">
+			varchar(32) NOT NULL
+		</ean>
+		<manufacturer_code type="varchar">
+			varchar(32) NOT NULL
+		</manufacturer_code>		
+		<weight type="decimal,">
+			decimal(12,4) NOT NULL
+		</weight>
+		<weight_volume_units type="decimal,">
+			decimal(14,4) NOT NULL
+		</weight_volume_units>
+		<ext_attribute_product_id type="int">
+			int(11) NOT NULL
+		</ext_attribute_product_id>
+	</products_attr>
+	<products_attr2>
+		<id type="int">
+			int(11) NOT NULL auto_increment PRIMARY KEY
+		</id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<attr_id type="int">
+			int(11) NOT NULL
+		</attr_id>
+		<attr_value_id type="int">
+			int(11) NOT NULL
+		</attr_value_id>
+		<price_mod type="char">
+			char(1) NOT NULL
+		</price_mod>
+		<addprice type="decimal,">	
+			decimal(14,4) NOT NULL
+		</addprice>
+	</products_attr2>
+	
+	<products_extra_field_groups>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+	</products_extra_field_groups>
+	<products_extra_field_values>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<field_id type="int">
+			int(11) NOT NULL
+		</field_id>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+	</products_extra_field_values>
+	<products_files key="`product_id` (`product_id`)">
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<demo type="varchar">
+			varchar(255) NOT NULL
+		</demo>
+		<demo_descr type="varchar">
+			varchar(255) NOT NULL
+		</demo_descr>
+		<file type="varchar">
+			varchar(255) NOT NULL
+		</file>
+		<file_descr type="varchar">
+			varchar(255) NOT NULL
+		</file_descr>
+		<ordering type="int">
+			int(11) NOT NULL
+		</ordering>
+	</products_files>
+	<products_free_attr key="`product_id` (`product_id`),`attr_id` (`attr_id`)">
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<attr_id type="int">
+			int(11) NOT NULL
+		</attr_id>
+	</products_free_attr>
+	<products_images>
+		<image_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</image_id>
+		<product_id type="int">
+			int(11) NOT NULL DEFAULT '0'
+		</product_id>
+		<image_name type="varchar">
+			varchar(255) NOT NULL DEFAULT ''
+		</image_name>
+		<name type="varchar">
+			varchar(255) NOT NULL DEFAULT ''
+		</name>
+		<ordering type="tinyint">
+			tinyint(4) NOT NULL
+		</ordering>
+	</products_images>
+	<products_prices>	
+		<price_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</price_id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<discount type="decimal,">
+			decimal(16,6) NOT NULL
+		</discount>
+		<product_quantity_start type="int">
+			int(11) NOT NULL
+		</product_quantity_start>
+		<product_quantity_finish type="int">
+			int(11) NOT NULL
+		</product_quantity_finish>
+	</products_prices>
+	<products_relations>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>	
+		<product_id type="int">
+			int(11) NOT NULL DEFAULT '0'
+		</product_id>
+		<product_related_id type="int">
+			int(11) NOT NULL DEFAULT '0'
+		</product_related_id>
+	</products_relations>
+	<products_reviews>	
+		<review_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</review_id>
+		<product_id type="int">
+			int(11) NOT NULL
+		</product_id>
+		<user_id type="int">
+			int(11) NOT NULL
+		</user_id>
+		<user_name type="varchar">
+			varchar(255) NOT NULL
+		</user_name>
+		<user_email type="varchar">
+			varchar(255) NOT NULL
+		</user_email>
+		<time type="datetime">
+			datetime NOT NULL
+		</time>
+		<review type="text">
+			text NOT NULL
+		</review>
+		<mark type="int">
+			int(11) NOT NULL
+		</mark>
+		<publish type="tinyint">
+			tinyint(1) NOT NULL
+		</publish>
+		<ip type="varchar">
+			varchar(20) NOT NULL
+		</ip>
+	</products_reviews>
+	<products_to_categories key="`category_id` (`category_id`),`product_id` (`product_id`)">
+		<product_id type="int">
+			int(11) NOT NULL DEFAULT '0' PRIMARY KEY
+		</product_id>
+		<category_id type="int">
+			int(11) NOT NULL DEFAULT '0' PRIMARY KEY
+		</category_id>
+		<product_ordering type="int">
+			int(11) NOT NULL DEFAULT '0'
+		</product_ordering>
+	</products_to_categories>
+	<products_videos>
+		<video_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</video_id>
+		<product_id type="int">
+			int(11) NOT NULL DEFAULT '0'
+		</product_id>
+		<video_name type="varchar">
+			varchar(255) NOT NULL DEFAULT ''
+		</video_name>
+		<video_code type="text">
+			text NOT NULL
+		</video_code>
+		<video_preview type="varchar">
+			varchar(255) NOT NULL
+		</video_preview>
+	</products_videos>
+	<product_labels>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<name type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+		<image type="varchar">
+			varchar(255) NOT NULL
+		</image>
+	</product_labels>
+	<shipping_ext_calc>
+		<id type="int">	
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<name type="varchar">
+			varchar(100) NOT NULL
+		</name>
+		<alias type="varchar">
+			varchar(100) NOT NULL
+		</alias>
+		<description type="text">
+			text NOT NULL
+		</description>
+		<params type="longtext">
+			longtext NOT NULL
+		</params>
+		<shipping_method type="text">
+			text NOT NULL
+		</shipping_method>
+		<published type="tinyint">
+			tinyint(1) NOT NULL
+		</published>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+	</shipping_ext_calc>
+	<shipping_method>
+		<shipping_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</shipping_id>
+		<alias type="varchar">
+			varchar(100) NOT NULL
+		</alias>                
+		<name multilang='1' type="varchar">
+			varchar(100) NOT NULL
+		</name>
+		<description multilang='1' type="text">
+			text NOT NULL
+		</description>
+		<published type="tinyint">
+			tinyint(1) NOT NULL
+		</published>
+		<payments type="varchar">
+			varchar(255) NOT NULL
+		</payments>
+		<image type="varchar">
+			varchar(255) NOT NULL
+		</image>
+		<ordering type="int">
+			int(6) NOT NULL
+		</ordering>
+		<params type="longtext">
+			longtext NOT NULL
+		</params>                
+	</shipping_method>
+	<shipping_method_price>	
+		<sh_pr_method_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</sh_pr_method_id>
+		<shipping_method_id type="int">
+			int(11) NOT NULL
+		</shipping_method_id>
+		<shipping_tax_id type="int">
+			int(11) NOT NULL
+		</shipping_tax_id>
+		<shipping_stand_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</shipping_stand_price>
+		<package_tax_id type="int">
+			int(11) NOT NULL
+		</package_tax_id>
+		<package_stand_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</package_stand_price>
+		<delivery_times_id type="int">
+			int(11) NOT NULL
+		</delivery_times_id>
+		<params type="longtext">
+			longtext NOT NULL
+		</params>
+	</shipping_method_price>
+	<shipping_method_price_countries index="country_id,sh_pr_method_id">	
+		<sh_method_country_id type="int">
+			INT NOT NULL AUTO_INCREMENT PRIMARY KEY	
+		</sh_method_country_id>
+		<country_id type="int">
+			INT NOT NULL
+		</country_id>
+		<sh_pr_method_id type="int">
+			INT NOT NULL
+		</sh_pr_method_id>
+	</shipping_method_price_countries>
+	<shipping_method_price_weight index='sh_pr_method_id'>	
+		<sh_pr_weight_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</sh_pr_weight_id>
+		<sh_pr_method_id type="int">
+			int(11) NOT NULL
+		</sh_pr_method_id>
+		<shipping_price type="decimal,">
+			decimal(12,2) NOT NULL
+		</shipping_price>
+		<shipping_weight_from type="decimal,">
+			decimal(14,4) NOT NULL
+		</shipping_weight_from>
+		<shipping_weight_to type="decimal,">
+			decimal(14,4) NOT NULL
+		</shipping_weight_to>
+		<shipping_package_price type="decimal,">	
+			DECIMAL(14,4) NOT NULL
+		</shipping_package_price>
+	</shipping_method_price_weight>
+	<taxes>
+		<tax_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</tax_id>
+		<tax_name type="varchar">
+			varchar(50) NOT NULL DEFAULT ''
+		</tax_name>
+		<tax_value type="decimal,">
+			decimal(12,2) NOT NULL DEFAULT '0.00'
+		</tax_value>
+	</taxes>
+	<taxes_ext>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<tax_id type="int">
+			int(11) NOT NULL
+		</tax_id>
+		<zones type="text">
+			text NOT NULL
+		</zones>
+		<tax type="decimal,">
+			decimal(12,2) NOT NULL
+		</tax>
+		<firma_tax type="decimal,">
+			decimal(12,2) NOT NULL
+		</firma_tax>
+	</taxes_ext>
+	<unit>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<qty type="int">
+			int(11) NOT NULL DEFAULT '1'
+		</qty>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>
+	</unit>
+	<usergroups>		
+		<usergroup_id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</usergroup_id>
+		<usergroup_name type="varchar">
+			varchar(64) NOT NULL
+		</usergroup_name>
+		<usergroup_discount type="decimal,">
+			decimal(12,2) NOT NULL
+		</usergroup_discount>
+		<usergroup_description type="text">
+			text NOT NULL
+		</usergroup_description>
+		<usergroup_is_default type="tinyint">
+			tinyint(1) NOT NULL
+		</usergroup_is_default>
+		<name multilang='1' type="varchar">
+			varchar(255) NOT NULL
+		</name>                  
+	</usergroups>
+	<users unique_key="`user_id` (`user_id`)" key="`u_name` (`u_name`),`usergroup_id` (`usergroup_id`)">
+		<user_id type="int">
+			int(11) NOT NULL
+		</user_id>
+		<usergroup_id type="int">
+			int(11) NOT NULL
+		</usergroup_id>
+		<payment_id type="int">
+			int(11) NOT NULL
+		</payment_id>
+		<shipping_id type="int">
+			int(11) NOT NULL
+		</shipping_id>
+		<u_name type="varchar">
+			varchar(150) NOT NULL
+		</u_name>
+		<number type="varchar">
+			varchar(32) NOT NULL
+		</number>
+		<title type="tinyint">
+			tinyint(1) NOT NULL
+		</title>
+		<f_name type="varchar">
+			varchar(255) NOT NULL
+		</f_name>
+		<l_name type="varchar">
+			varchar(255) NOT NULL
+		</l_name>
+		<m_name type="varchar">
+			varchar(255) NOT NULL
+		</m_name>
+		<firma_name type="varchar">
+			varchar(100) NOT NULL
+		</firma_name>
+		<client_type type="tinyint">
+			tinyint(1) NOT NULL
+		</client_type>
+		<firma_code type="varchar">
+			varchar(100) NOT NULL
+		</firma_code>
+		<tax_number type="varchar">
+			varchar(100) NOT NULL
+		</tax_number>
+		<email type="varchar">
+			varchar(255) NOT NULL
+		</email>
+		<birthday type="date">
+			date NOT NULL
+		</birthday>
+		<street type="varchar">
+			varchar(255) NOT NULL
+		</street>
+		<street_nr type="varchar">
+			varchar(16) NOT NULL
+		</street_nr>
+		<home type="varchar">
+			varchar(20) NOT NULL
+		</home>
+		<apartment type="varchar">
+			varchar(20) NOT NULL
+		</apartment>
+		<zip type="varchar">
+			varchar(20) NOT NULL
+		</zip>
+		<city type="varchar">
+			varchar(100) NOT NULL
+		</city>
+		<state type="varchar">
+			varchar(100) NOT NULL
+		</state>
+		<country type="int">
+			int(11) DEFAULT NULL
+		</country>
+		<phone type="varchar">
+			varchar(24) NOT NULL
+		</phone>
+		<mobil_phone type="varchar">
+			varchar(24) NOT NULL
+		</mobil_phone>
+		<fax type="varchar">
+			varchar(24) NOT NULL
+		</fax>
+		<ext_field_1 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_1>
+		<ext_field_2 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_2>
+		<ext_field_3 type="varchar">
+			varchar(255) NOT NULL
+		</ext_field_3>
+		<delivery_adress type="tinyint">
+			tinyint(1) NOT NULL
+		</delivery_adress>
+		<d_title type="tinyint">
+			tinyint(1) NOT NULL
+		</d_title>
+		<d_f_name type="varchar">
+			varchar(255) NOT NULL
+		</d_f_name>
+		<d_l_name type="varchar">
+			varchar(255) NOT NULL
+		</d_l_name>
+		<d_m_name type="varchar">
+			varchar(255) NOT NULL
+		</d_m_name>
+		<d_firma_name type="varchar">
+			varchar(100) NOT NULL
+		</d_firma_name>
+		<d_email type="varchar">
+			varchar(255) NOT NULL
+		</d_email>
+		<d_birthday type="date">
+			date NOT NULL
+		</d_birthday>
+		<d_street type="varchar">
+			varchar(255) NOT NULL
+		</d_street>
+		<d_street_nr type="varchar">
+			varchar(16) NOT NULL
+		</d_street_nr>
+		<d_home type="varchar">
+			varchar(20) NOT NULL
+		</d_home>
+		<d_apartment type="varchar">
+			varchar(20) NOT NULL
+		</d_apartment>
+		<d_zip type="varchar">
+			varchar(20) NOT NULL
+		</d_zip>
+		<d_city type="varchar">
+			varchar(100) NOT NULL
+		</d_city>
+		<d_state type="varchar">
+			varchar(100) NOT NULL
+		</d_state>
+		<d_country type="int">
+			int(11) DEFAULT NULL
+		</d_country>
+		<d_phone type="varchar">
+			varchar(24) NOT NULL
+		</d_phone>
+		<d_mobil_phone type="varchar">
+			varchar(24) NOT NULL
+		</d_mobil_phone>
+		<d_fax type="varchar">
+			varchar(24) NOT NULL
+		</d_fax>
+		<d_ext_field_1 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_1>
+		<d_ext_field_2 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_2>
+		<d_ext_field_3 type="varchar">
+			varchar(255) NOT NULL
+		</d_ext_field_3>
+		<lang type="varchar">
+			varchar(5) NOT NULL
+		</lang>                
+	</users>
+	<vendors>
+		<id type="int">
+			int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+		</id>
+		<shop_name type="varchar">
+			varchar(255) NOT NULL
+		</shop_name>
+		<company_name type="varchar">
+			varchar(255) NOT NULL
+		</company_name>
+		<url type="varchar">
+			varchar(255) NOT NULL
+		</url>
+		<logo type="varchar">
+			varchar(255) NOT NULL
+		</logo>
+		<adress type="varchar">
+			varchar(255) NOT NULL
+		</adress>
+		<city type="varchar">
+			varchar(100) NOT NULL
+		</city>
+		<zip type="varchar">
+			varchar(20) NOT NULL
+		</zip>
+		<state type="varchar">
+			varchar(100) NOT NULL
+		</state>
+		<country type="int">
+			int(11) NOT NULL
+		</country>
+		<f_name type="varchar">
+			varchar(255) NOT NULL
+		</f_name>
+		<l_name type="varchar">
+			varchar(255) NOT NULL
+		</l_name>
+		<middlename type="varchar">
+			varchar(255) NOT NULL
+		</middlename>
+		<phone type="varchar">
+			varchar(24) NOT NULL
+		</phone>
+		<fax type="varchar">
+			varchar(24) NOT NULL
+		</fax>
+		<email type="varchar">
+			varchar(255) NOT NULL
+		</email>
+		<benef_bank_info type="varchar">
+			varchar(64) NOT NULL
+		</benef_bank_info>
+		<benef_bic type="varchar">
+			varchar(64) NOT NULL
+		</benef_bic>
+		<benef_conto type="varchar">
+			varchar(64) NOT NULL
+		</benef_conto>
+		<benef_payee type="varchar">
+			varchar(64) NOT NULL
+		</benef_payee>
+		<benef_iban type="varchar">
+			varchar(64) NOT NULL
+		</benef_iban>
+		<benef_bic_bic type="varchar">
+			varchar(64) NOT NULL
+		</benef_bic_bic>
+		<benef_swift type="varchar">
+			varchar(64) NOT NULL
+		</benef_swift>
+		<interm_name type="varchar">
+			varchar(64) NOT NULL
+		</interm_name>
+		<interm_swift type="varchar">
+			varchar(64) NOT NULL
+		</interm_swift>
+		<identification_number type="varchar">
+			varchar(64) NOT NULL
+		</identification_number>
+		<tax_number type="varchar">
+			varchar(64) NOT NULL
+		</tax_number>
+		<additional_information type="text">
+			text NOT NULL
+		</additional_information>
+		<user_id type="int">
+			int(11) NOT NULL
+		</user_id>
+		<main type="tinyint">
+			tinyint(1) NOT NULL
+		</main>
+		<publish type="tinyint">
+			tinyint(1) NOT NULL
+		</publish>
+	</vendors>
+	
+	
+	
+	
+</com_jshopping>

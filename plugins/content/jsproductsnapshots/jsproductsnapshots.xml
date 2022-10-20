@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>JoomShopping Product Snapshot</name>
+	<creationDate>01.05.2013</creationDate>
+	<author>Arkadiy Sedelnikov</author>
+	<authorEmail>a.sedelnikov@gmail.com</authorEmail>
+	<authorUrl>http://argens.ru</authorUrl>
+	<copyright>
+		Copyright (C) 2012 Arkadiy Sedelnikov. All rights
+		reserved.
+	</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.1</version>
+	<description>Show Product Snapshots in Content (Let's you add/edit snapshots of products in your JoomShopping. Enter multiple products by separating them with a |.)</description>
+	<files>
+		<filename plugin="jsproductsnapshots">jsproductsnapshots.php</filename>
+		<filename>index.html</filename>
+        <folder>assets</folder>
+	</files>
+	<languages>
+        <language tag="en-GB">language/en-GB.plg_content_jsproductsnapshots.ini</language>
+        <language tag="en-GB">language/en-GB.plg_content_jsproductsnapshots.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU.plg_content_jsproductsnapshots.ini</language>
+        <language tag="ru-RU">language/ru-RU.plg_content_jsproductsnapshots.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		
+				<field name="enabled" type="radio" default="1"
+					label="JSPSS_ALLOW" 
+					description="JSPSS_ALLOW_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showname" type="radio" default="n"
+					label="JSPSS_SHOW_NAME"
+					description="JSPSS_SHOW_NAME_DESC">
+					<option value="n">JNO</option>
+					<option value="y">JYES</option>
+				</field>
+				<field name="showimage" type="radio" default="n"
+					label="JSPSS_SHOW_IMAGE"
+					description="JSPSS_SHOW_IMAGE_DESC">
+					<option value="n">JNO</option>
+					<option value="y">JYES</option>
+				</field>
+				<field name="showdesc" type="radio" default="n"
+					label="JSPSS_SHOW_DESC"
+					description="JSPSS_SHOW_DESC_DESC">
+					<option value="n">JNO</option>
+					<option value="y">JYES</option>
+				</field>
+				<field name="showprice" type="radio" default="n"
+					label="JSPSS_SHOW_PRICE"
+					description="JSPSS_SHOW_PRICE_DESC">
+					<option value="n">JNO</option>
+					<option value="y">JYES</option>
+				</field>
+				<field name="showaddtocart" type="radio" default="n"
+					label="JSPSS_SHOW_ADDTOCART"
+					description="JSPSS_SHOW_ADDTOCART_DESC">
+					<option value="n">JNO</option>
+					<option value="y">JYES</option>
+				</field>
+				<field name="displayeach" type="radio" default="h"
+					label="JSPSS_DISPLAY_EACH"
+					description="JSPSS_DISPLAY_EACH_DESC">
+					<option value="h">JSPSS_HORIZONTAL</option>
+					<option value="v">JSPSS_VERTICAL</option>
+				</field>
+                <field name="to_one_line" type="text" default="3"
+                       label="JSPSS_TO_ONE_LINE"
+                       description="JSPSS_TO_ONE_LINE_DESC" />
+				<field name="displaylist" type="radio" default="v"
+					label="JSPSS_DISPLAY_LIST"
+					description="JSPSS_DISPLAY_LIST_DESC">
+					<option value="h">JSPSS_HORIZONTAL</option>
+					<option value="v">JSPSS_VERTICAL</option>
+				</field>
+				<field name="width" type="text" default="100%"
+					label="JSPSS_WIDTH"
+					description="JSPSS_WIDTH_DESC">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

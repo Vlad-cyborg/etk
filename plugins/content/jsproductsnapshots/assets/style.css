@@ -1,0 +1,35 @@
+.horizontal{
+     float: left;
+}
+
+.vertical{
+    float: none;
+    clear: both;
+}
+.jspss_product_img{
+    width: 90px;
+    border: none;
+}
+.jspss_products{
+    overflow: hidden;
+    display: block;
+    float: none;
+    clear: both;
+}
+.jspss_desc{
+    padding: 0 5px;
+}
+.jspss_product_name{
+    font-weight: bold;
+}
+.jspss_product_link{
+
+}
+.jspss_price{
+    font-style: italic;
+    padding: 0 5px;
+}
+.jspss_addtocart{
+    font-style: italic;
+    padding: 0 5px;
+}

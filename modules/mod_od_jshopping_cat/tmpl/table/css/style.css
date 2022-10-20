@@ -1,0 +1,25 @@
+.odcat{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+.odcat tr{
+
+}
+.odcat tr td{
+	padding: 2px 5px;
+}
+.odcat tr td.root{
+	font-weight: bold;
+}
+.odcat tr td.odsubcat-2{
+	padding-left: 20px;
+}
+.odcat tr td.odsubcat-3{
+	padding-left: 30px;
+}
+.odcat tr td.selected{
+	background: #ccc;
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `#__jshopping_products` CHANGE `min_price` `min_price` DECIMAL(18,6) NOT NULL;

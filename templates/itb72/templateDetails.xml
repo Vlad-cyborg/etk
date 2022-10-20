@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>itb72</name>
+	<creationDate>06-12-2012</creationDate>
+	<author>Денис Тюлькин</author>
+	<authorEmail>tulkin-@mail.ru</authorEmail>
+	<authorUrl>http://itb72.ru</authorUrl>
+	<copyright>Copyright (C) 2012</copyright>
+	<license>GNU General Public License version</license>
+	<version>1.0</version>
+	<description>ITB72_TMP</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>error.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<positions>
+		<position>top_left</position>
+		<position>top_right</position>
+		<position>top_center</position>
+                <position>menu</position>
+                <position>middle_left</position>
+                <position>middle_right</position>
+                <position>footer_left</position>
+                <position>footer_right</position>
+                <position>count_left</position>
+                <position>count_right</position>
+                <position>portfolio</position>
+                <position>post_content</position>
+                <position>slider</position>
+                <position>filters</position>
+	</positions>
+	
+</extension>

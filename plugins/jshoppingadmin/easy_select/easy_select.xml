@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" method="upgrade" group="jshoppingadmin">
+	<name>JoomShopping Plugin - Easy select in admin panel</name>
+	<author>Dmitry Kairlinov (StudioDK-WEB, kit2m2)</author>
+	<creationDate>18.05.2020</creationDate>
+	<copyright>Copyright © 2008-2020 StudioDK-WEB. All rights reserved</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>kit2m@mail.ru</authorEmail>
+	<authorUrl>http://dk-web.ru/</authorUrl>
+    <version>1.0</version>
+	<description>PLG_JSHOPPINGADMIN_EASY_SELECT_DESC</description>
+    <files>
+        <filename plugin="easy_select">easy_select.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>element</folder>
+		<folder>language</folder>
+    </files>
+	<languages>
+		<language tag="ru-RU">language/ru-RU/ru-RU.plg_jshoppingadmin_easy_select.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.plg_jshoppingadmin_easy_select.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/jshoppingadmin/easy_select/element">
+				<field type="yaform"/>
+				<field type="spacer" hr="true"/>
+			</fieldset>
+			<fieldset name="settings" label="PLG_JSHOPPING_SETTINGS_PLUGIN_LABEL">
+				<field
+					name="chosen_select2"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="PLG_JSHOPPINGADMIN_EASY_SELECT_CHOSEN_SELECT2_LABEL"
+					description="PLG_JSHOPPINGADMIN_EASY_SELECT_CHOSEN_SELECT2_DESC">
+					<option value="1">PLG_JSHOPPINGADMIN_EASY_SELECT_CHOSEN</option>
+					<option value="2">PLG_JSHOPPINGADMIN_EASY_SELECT_SELECT2</option>
+				</field>
+			
+				<field
+					name="loading_script"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="PLG_JSHOPPINGADMIN_EASY_SELECT_LOADING_SCRIPT_LABEL"
+					description="PLG_JSHOPPINGADMIN_EASY_SELECT_LOADING_SCRIPT_DESC">
+					<option value="0">PLG_JSHOPPINGADMIN_EASY_SELECT_LOADING_SCRIPT_OFFLINE</option>
+					<option value="1">PLG_JSHOPPINGADMIN_EASY_SELECT_LOADING_SCRIPT_ONLINE</option>
+				</field>
+				<field type="spacer" hr="true"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

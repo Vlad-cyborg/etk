@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_modal</name>
+	<author>itb72</author>
+	<creationDate>12.05.14</creationDate>
+	<copyright>Copyright (C) 2012 itb72.ru All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tulkin-@mail.ru</authorEmail>
+	<authorUrl>www.itb72.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_MODAL_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_modal">mod_modal.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>
+		<filename>mod_modal.xml</filename>
+	</files>
+	
+	<config>
+
+ <!-- Описание параметров модуля -->
+	        <fields name="params">
+	            <fieldset name="basic">
+	                <field
+	                    name="dateh"
+	                    type="text"
+	                    default="введите дату окочания акции"
+	                    label="Дата АКЦИИ"
+	                    description="введите дату окочания акции (например 22.05.2015)"/>
+
+	                <field type="spacer" />
+	                <field
+	                    name="name"
+	                    type="text"
+	                    default="Название акции."
+	                    label="Название акции"
+	                    description="введите название акции"/>
+	                <field
+	                    name="area"
+	                    type="text"
+	                    default="Краткое описание."
+	                    label="Краткое описание"
+	                    description="введите Краткое описание"/>
+	                <field
+	                    name="link"
+	                    type="text"
+	                    default="Ссылка"
+	                    label="Ссылка"
+	                    description="введите ссылку на страницу акции"/>
+	                <field
+	                    name="img"
+	                    type="media"
+	                    default=""
+	                    label="Картинка"
+	                    description="добавьте картинку"/>
+				</fieldset>
+			</fields>
+
+
+
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+
+	</config>
+	
+</extension>

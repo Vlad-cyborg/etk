@@ -1,0 +1,3 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:409:"<ul class="nav menu mod-list">
+<li class="item-101 default current active"><a href="/" >Главная</a></li><li class="item-102"><a href="/o-kompanii" >О компании</a></li><li class="item-104"><a href="/baza-znaniy" >База знаний</a></li><li class="item-115"><a href="/zakaz-tovara" >Заказ товара</a></li><li class="item-105"><a href="/kontakty" >Контакты</a></li></ul>
+";s:6:"output";a:3:{s:4:"body";s:0:"";s:4:"head";a:0:{}s:13:"mime_encoding";s:9:"text/html";}}
